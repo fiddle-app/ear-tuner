@@ -8,15 +8,15 @@
 | P | Fiddle App Family (parent) |
 | B | MicroBreaker |
 | E | Ear Tuner (this project) |
-| I | Intonio |
 | H | TuneHub |
-| M | Media Markup |
+| I | Intonio |
 | L | TuneList |
+| M | Media Markup |
 
 </details>
 
 | ID | P  | S | Description | Notes |
 |----|-----|---|-------------|-------|
-| B1 | P1 | ! | Fix focus-loss audio silence bug | iOS only |
-D: Be able to copy a report that you can email others.  As html or md?
-b; when i added it to homescreen on my ipad, it has lost its icon
+| B1 | P1 | . | Fix focus-loss audio silence bug | iOS only |
+| D1 | P2 | . | Be able to copy a report that you can email others | As HTML or Markdown? |
+| B2 | P2 | . | Fix missing icon when added to homescreen on iPad |  |
