@@ -958,6 +958,10 @@ if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)
 if (audioCtx.state === 'suspended') {
   try { await audioCtx.resume(); } catch(e){}
 }
+// Request 'playback' audio session so audio is not muted by iOS Ring/Silent switch
+if (navigator.audioSession && navigator.audioSession.type !== 'playback') {
+  try { navigator.audioSession.type = 'playback'; } catch(e){}
+}
 }
 
 // iOS sometimes caches font sizes across orientation changes — force recalc
@@ -1102,7 +1106,7 @@ function chimeSuccess() {
 // Uses inharmonic partials to simulate metal bell resonance
 const freq  = 440;   // A4 (changed from A5 880Hz)
 const dur   = 2.5;
-const gain  = 0.12;
+const gain  = 0.1;
 const delay = 0;
 const partials = [
   { ratio: 1.000, gainFrac: 1.00, durFrac: 1.0 },
