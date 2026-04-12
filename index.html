@@ -1002,7 +1002,7 @@ async function loadSfInstrument(sfName) {
 if (sfInstruments[sfName]) return sfInstruments[sfName];
 if (sfLoadingP[sfName])    return sfLoadingP[sfName];
 sfLoadingP[sfName] = Soundfont.instrument(audioCtx, sfName, {
-  from: 'https://caseymullen.github.io/microbreaker/ear/sounds/',
+  from: 'sounds/',
   gain: 1.0,
 }).then(inst => {
   sfInstruments[sfName] = inst;
