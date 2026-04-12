@@ -39,18 +39,18 @@ transition: background-color 0.5s ease;
 #app {
 position: fixed; inset: 0;
 display: flex; flex-direction: column; align-items: center;
-padding-top: calc(var(–safe-top) + 8px);
-padding-bottom: calc(var(–safe-bot) + 50px);
-padding-left: var(–safe-l); padding-right: var(–safe-r);
-font-family: var(–font); color: #fff;
-background-color: var(–orange);
+padding-top: calc(var(--safe-top) + 8px);
+padding-bottom: calc(var(--safe-bot) + 50px);
+padding-left: var(--safe-l); padding-right: var(--safe-r);
+font-family: var(--font); color: #fff;
+background-color: var(--orange);
 overflow: hidden;
 transition: background-color 0.5s ease;
 }
 #app.retest-mode { background-color: #0d2a1a; }
 #exit-retest-btn {
 display: none;
--webkit-appearance: none; font-family: var(–font);
+-webkit-appearance: none; font-family: var(--font);
 font-size: clamp(12px, 3.2vw, 14px); letter-spacing: 0.10em;
 padding: 7px 18px; border-radius: 999px; cursor: pointer;
 background: rgba(255,255,255,0.08);
@@ -62,7 +62,7 @@ transition: background 0.15s;
 #exit-retest-btn:active { background: rgba(255,255,255,0.18); }
 
 #app::after {
-content: ‘’; position: absolute; inset: 0; pointer-events: none;
+content: ''; position: absolute; inset: 0; pointer-events: none;
 background: radial-gradient(ellipse at center, transparent 25%, rgba(0,0,0,0.55) 100%);
 z-index: 0;
 }
@@ -96,7 +96,7 @@ width: 100%; padding-bottom: 10px;
 display: flex; flex-direction: column; align-items: center; gap: 0;
 }
 #diff-value {
-font-family: ‘Nunito’, sans-serif;
+font-family: 'Nunito', sans-serif;
 font-size: clamp(18px, 5.5vw, 26px); font-weight: 700;
 letter-spacing: 0.04em; opacity: 0.55; text-align: center;
 line-height: 1.2;
@@ -125,7 +125,7 @@ display: none;
 background: rgba(255,255,255,0.13);
 border: 2px solid rgba(255,255,255,0.45);
 border-radius: 999px; color: #fff;
-font-family: var(–font);
+font-family: var(--font);
 font-size: clamp(22px, 7vw, 34px); font-weight: 400;
 letter-spacing: 0.18em; padding: 18px 48px;
 cursor: pointer; -webkit-appearance: none;
@@ -135,7 +135,7 @@ transition: background 0.15s, transform 0.1s;
 
 /* ── Hint font (swipe hint, tap instruction, review instruction) ── */
 .hint-text {
-font-family: var(–font);
+font-family: var(--font);
 font-size: 13px; /* fixed px — immune to orientation changes */
 font-weight: 300;
 color: #fff;
@@ -150,7 +150,7 @@ letter-spacing: 0.05em;
 /* ── Swipe hint ── */
 #swipe-hint {
 position: fixed;
-bottom: calc(var(–safe-bot) + 54px);
+bottom: calc(var(--safe-bot) + 54px);
 left: 0; right: 0;
 padding: 0 16px;
 pointer-events: none; z-index: 5;
@@ -189,7 +189,7 @@ font-size: clamp(28px, 9vw, 42px); font-weight: 600;
 letter-spacing: -0.01em; line-height: 1;
 }
 .nc-detail {
-font-family: ‘Nunito’, sans-serif;
+font-family: 'Nunito', sans-serif;
 font-size: clamp(12px, 3.3vw, 15px); font-weight: 700;
 opacity: 0.70; letter-spacing: 0.02em; line-height: 1.2;
 text-align: center; min-height: 1.2em;
@@ -230,7 +230,7 @@ display: none; flex-direction: row; gap: 12px;
 margin-top: 14px; flex-shrink: 0;
 }
 .round-action-btn {
--webkit-appearance: none; font-family: var(–font);
+-webkit-appearance: none; font-family: var(--font);
 font-size: clamp(14px, 4vw, 17px); font-weight: 400;
 letter-spacing: 0.08em; padding: 10px 22px;
 border-radius: 999px; cursor: pointer;
@@ -259,24 +259,24 @@ z-index: 0; -webkit-appearance: none;
 #lower-half { position: relative; }
 #lower-half > *:not(#tap-area) { position: relative; z-index: 1; }
 #info-btn {
-position: fixed; bottom: 0; right: calc(var(–safe-r) + 14px);
+position: fixed; bottom: 0; right: calc(var(--safe-r) + 14px);
 background: none; border: none; color: rgba(255,255,255,0.36);
 cursor: pointer; padding: 8px; z-index: 10; -webkit-appearance: none;
 transition: color 0.15s;
 }
 #info-btn:active { color: rgba(255,255,255,0.72); }
 #settings-btn {
-position: fixed; bottom: 0; left: calc(var(–safe-l) + 14px);
+position: fixed; bottom: 0; left: calc(var(--safe-l) + 14px);
 background: none; border: none; color: rgba(255,255,255,0.36);
 cursor: pointer; padding: 8px; z-index: 10; -webkit-appearance: none;
 transition: color 0.15s;
 }
 #settings-btn:active { color: rgba(255,255,255,0.72); }
 #end-test-btn {
-position: fixed; bottom: calc(var(–safe-bot) + 6px);
+position: fixed; bottom: calc(var(--safe-bot) + 6px);
 left: 50%; transform: translateX(-50%);
 background: rgba(0,0,0,0.28); border: 1.5px solid rgba(255,255,255,0.30);
-border-radius: 999px; color: #fff; font-family: var(–font);
+border-radius: 999px; color: #fff; font-family: var(--font);
 font-size: clamp(12px, 3.2vw, 14px); letter-spacing: 0.10em;
 padding: 7px 18px; cursor: pointer; z-index: 10;
 -webkit-appearance: none; display: none; white-space: nowrap;
@@ -288,20 +288,20 @@ OVERLAYS
 ═══════════════════════════════ */
 .overlay {
 display: none; position: fixed; inset: 0; z-index: 200;
-font-family: var(–font);
+font-family: var(--font);
 }
 .overlay.open { display: flex; flex-direction: column; }
 
 /* Settings */
 #settings-overlay { background: #1a1a1a; color: #fff; }
 #s-done-btn {
-position: fixed; top: calc(var(–safe-top) + 8px); right: calc(var(–safe-r) + 10px);
+position: fixed; top: calc(var(--safe-top) + 8px); right: calc(var(--safe-r) + 10px);
 background: none; border: none; color: #4d9966; cursor: pointer;
 padding: 8px; z-index: 210; -webkit-appearance: none;
 }
 #settings-scroll {
 flex: 1; overflow-y: auto; -webkit-overflow-scrolling: touch;
-padding: calc(var(–safe-top) + 58px) 0 calc(var(–safe-bot) + 24px);
+padding: calc(var(--safe-top) + 58px) 0 calc(var(--safe-bot) + 24px);
 display: flex; flex-direction: column; align-items: center;
 }
 #settings-inner { width: 100%; max-width: 480px; padding: 0 24px; display: flex; flex-direction: column; }
@@ -323,7 +323,7 @@ width: 36px; height: 36px; border-radius: 50%;
 background: rgba(255,255,255,0.12); border: 1.5px solid rgba(255,255,255,0.25);
 color: #fff; font-size: 22px; line-height: 1; cursor: pointer;
 display: flex; align-items: center; justify-content: center;
--webkit-appearance: none; transition: background 0.12s; font-family: var(–font); padding-bottom: 2px;
+-webkit-appearance: none; transition: background 0.12s; font-family: var(--font); padding-bottom: 2px;
 }
 .step-btn:active { background: rgba(255,255,255,0.28); }
 .s-val { font-size: clamp(14px, 3.8vw, 17px); font-weight: 400; min-width: 52px; text-align: center; color: rgba(255,255,255,0.85); }
@@ -338,15 +338,15 @@ display: flex; align-items: center; justify-content: center;
 .tog-sw input:checked ~ .tog-track { background: #1a3d28; }
 .tog-thumb { position: absolute; left: 3px; width: 22px; height: 22px; border-radius: 50%; background: #fff; transition: transform 0.2s; pointer-events: none; }
 .tog-sw input:checked ~ .tog-thumb { transform: translateX(22px); }
-#s-reset-btn { background: none; border: none; color: rgba(255,255,255,0.35); font-family: var(–font); font-size: clamp(14px, 3.8vw, 17px); letter-spacing: 0.04em; cursor: pointer; margin-top: 28px; padding: 6px 0; text-decoration: underline; text-underline-offset: 3px; -webkit-appearance: none; align-self: center; }
+#s-reset-btn { background: none; border: none; color: rgba(255,255,255,0.35); font-family: var(--font); font-size: clamp(14px, 3.8vw, 17px); letter-spacing: 0.04em; cursor: pointer; margin-top: 28px; padding: 6px 0; text-decoration: underline; text-underline-offset: 3px; -webkit-appearance: none; align-self: center; }
 #s-reset-btn:active { color: rgba(255,255,255,0.65); }
 #reset-overlay { display: none; position: fixed; inset: 0; z-index: 400; background: rgba(0,0,0,0.75); align-items: center; justify-content: center; }
 #reset-overlay.open { display: flex; }
-#reset-box { background: #2a2a2a; border-radius: 16px; padding: 28px 24px; max-width: 320px; width: 90%; font-family: var(–font); color: #fff; }
+#reset-box { background: #2a2a2a; border-radius: 16px; padding: 28px 24px; max-width: 320px; width: 90%; font-family: var(--font); color: #fff; }
 #reset-title-r { font-size: clamp(17px, 5vw, 22px); font-weight: 600; margin-bottom: 10px; }
 #reset-msg-r { font-size: clamp(14px, 4vw, 17px); font-weight: 300; color: rgba(255,255,255,0.72); margin-bottom: 22px; line-height: 1.5; }
 #reset-btns-r { display: flex; flex-direction: column; gap: 10px; }
-#reset-btns-r button { -webkit-appearance: none; font-family: var(–font); cursor: pointer; border-radius: 999px; font-size: clamp(14px, 4vw, 17px); padding: 12px; border: none; transition: opacity 0.15s; letter-spacing: 0.04em; }
+#reset-btns-r button { -webkit-appearance: none; font-family: var(--font); cursor: pointer; border-radius: 999px; font-size: clamp(14px, 4vw, 17px); padding: 12px; border: none; transition: opacity 0.15s; letter-spacing: 0.04em; }
 #reset-yes-r { background: #c0392b; color: #fff; }
 #reset-cancel-r { background: none; color: rgba(255,255,255,0.50); text-decoration: underline; font-size: clamp(13px, 3.5vw, 15px); cursor: pointer; }
 
@@ -355,7 +355,7 @@ display: flex; align-items: center; justify-content: center;
 display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 4px;
 }
 .sound-btn {
--webkit-appearance: none; font-family: var(–font);
+-webkit-appearance: none; font-family: var(--font);
 font-size: clamp(13px, 3.5vw, 15px); font-weight: 400;
 letter-spacing: 0.04em; padding: 10px 8px; text-align: center;
 border-radius: 10px; cursor: pointer;
@@ -368,10 +368,24 @@ background: rgba(180,90,30,0.40); border-color: rgba(220,140,80,0.70); color: #f
 .sound-btn:active { opacity: 0.70; }
 .sound-btn.loading { opacity: 0.50; }
 
+/* ── Log action buttons (rounded rect, not pill) ── */
+.log-action-btn {
+-webkit-appearance: none; font-family: var(--font);
+font-size: clamp(12px, 3vw, 14px);
+width: auto; padding: 0 14px; height: 36px;
+border-radius: 6px;
+background: rgba(255,255,255,0.12); border: 1.5px solid rgba(255,255,255,0.25);
+color: #fff; cursor: pointer;
+display: flex; align-items: center; justify-content: center;
+transition: background 0.12s, color 0.12s;
+}
+.log-action-btn:active { background: rgba(255,255,255,0.28); }
+.log-action-btn.feedback { color: #7de8a8; border-color: rgba(100,210,130,0.45); }
+
 /* Info overlay */
 #retest-close-btn {
 display: none; position: fixed;
-top: calc(var(–safe-top) + 8px); right: calc(var(–safe-r) + 10px);
+top: calc(var(--safe-top) + 8px); right: calc(var(--safe-r) + 10px);
 background: none; border: none; color: rgba(255,255,255,0.45);
 cursor: pointer; padding: 8px; z-index: 15; -webkit-appearance: none;
 transition: color 0.15s;
@@ -380,7 +394,7 @@ transition: color 0.15s;
 
 #info-overlay {
 background: #f5efe6; color: #111; overflow-y: auto; -webkit-overflow-scrolling: touch;
-padding: calc(var(–safe-top) + 8px) 24px calc(var(–safe-bot) + 24px);
+padding: calc(var(--safe-top) + 8px) 24px calc(var(--safe-bot) + 24px);
 background-image: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.10) 100%);
 }
 #info-close-btn, #info-close-btn-bottom {
@@ -399,7 +413,7 @@ cursor: pointer; padding: 4px;
 #info-more-content { display: none; flex-direction: column; gap: 18px; margin-top: 0; }
 #info-more-content.open { display: flex; margin-top: 14px; }
 #info-more-btn {
--webkit-appearance: none; font-family: var(–font);
+-webkit-appearance: none; font-family: var(--font);
 font-size: clamp(13px, 3.5vw, 15px); font-weight: 400; letter-spacing: 0.02em;
 background: none; border: none; color: rgba(0,0,0,0.40);
 cursor: pointer; padding: 8px 0 0 0; text-align: left;
@@ -422,7 +436,7 @@ align-self: flex-start; transition: color 0.15s;
 .stat-failed { font-weight: 500; color: #7a2900; }
 .stat-row-regressed { background: rgba(255, 220, 0, 0.25); }
 .stat-row-no-best { background: rgba(200, 80, 20, 0.10); }
-.stat-btn { -webkit-appearance: none; font-family: var(–font); font-size: clamp(11px, 3vw, 13px); padding: 3px 10px; border-radius: 999px; cursor: pointer; border: none; transition: opacity 0.15s; }
+.stat-btn { -webkit-appearance: none; font-family: var(--font); font-size: clamp(11px, 3vw, 13px); padding: 3px 10px; border-radius: 999px; cursor: pointer; border: none; transition: opacity 0.15s; }
 .stat-btn:active { opacity: 0.6; }
 .stat-reset-btn { background: rgba(180,60,20,0.15); color: #7a2900; }
 .stat-retest-btn { background: rgba(26,61,40,0.15); color: #2a7a48; border: 1px solid rgba(26,61,40,0.30); margin-left: 4px; }
@@ -435,7 +449,7 @@ position: relative;
 }
 #stats-chart { width: 100%; height: 100%; }
 #info-global-reset {
--webkit-appearance: none; font-family: var(–font); font-size: clamp(13px, 3.5vw, 15px);
+-webkit-appearance: none; font-family: var(--font); font-size: clamp(13px, 3.5vw, 15px);
 padding: 10px 22px; border-radius: 999px; cursor: pointer;
 border: 1.5px solid rgba(0,0,0,0.15); background: rgba(0,0,0,0.06); color: rgba(0,0,0,0.45);
 align-self: flex-start; margin-top: 4px; transition: background 0.15s;
@@ -448,11 +462,11 @@ display: none; position: fixed; inset: 0; z-index: 500;
 background: rgba(0,0,0,0.72); align-items: center; justify-content: center;
 }
 #confirm-overlay.open { display: flex; }
-#confirm-box { background: #2a2a2a; border-radius: 16px; padding: 28px 24px; max-width: 320px; width: 90%; font-family: var(–font); color: #fff; }
+#confirm-box { background: #2a2a2a; border-radius: 16px; padding: 28px 24px; max-width: 320px; width: 90%; font-family: var(--font); color: #fff; }
 #confirm-title { font-size: clamp(17px, 5vw, 21px); font-weight: 600; margin-bottom: 10px; }
 #confirm-msg   { font-size: clamp(14px, 4vw, 16px); font-weight: 300; color: rgba(255,255,255,0.70); margin-bottom: 22px; line-height: 1.5; }
 #confirm-btns  { display: flex; flex-direction: column; gap: 10px; }
-#confirm-btns button { -webkit-appearance: none; font-family: var(–font); cursor: pointer; border-radius: 999px; font-size: clamp(14px, 4vw, 16px); padding: 12px; border: none; transition: opacity 0.15s; }
+#confirm-btns button { -webkit-appearance: none; font-family: var(--font); cursor: pointer; border-radius: 999px; font-size: clamp(14px, 4vw, 16px); padding: 12px; border: none; transition: opacity 0.15s; }
 #confirm-yes { background: #c0392b; color: #fff; }
 #confirm-no  { background: rgba(255,255,255,0.14); color: #fff; }
 </style>
@@ -510,17 +524,14 @@ background: rgba(0,0,0,0.72); align-items: center; justify-content: center;
     <div id="progress-row">
     </div>
 
-```
-<div id="status-msg">Tap to begin</div>
+    <div id="status-msg">Tap to begin</div>
 
-<div id="round-actions">
-  <button class="round-action-btn" id="retry-action-btn" onclick="retryRound()">Retry</button>
-  <button class="round-action-btn" id="continue-action-btn" onclick="continueAfterFail()">Continue</button>
-  <button class="round-action-btn" id="back-action-btn" onclick="continueAfterFail()" style="display:none;">Back</button>
-</div>
-<button id="exit-retest-btn" onclick="exitRetest()">Exit re-test</button>
-```
-
+    <div id="round-actions">
+      <button class="round-action-btn" id="retry-action-btn" onclick="retryRound()">Retry</button>
+      <button class="round-action-btn" id="continue-action-btn" onclick="continueAfterFail()">Continue</button>
+      <button class="round-action-btn" id="back-action-btn" onclick="continueAfterFail()" style="display:none;">Back</button>
+    </div>
+    <button id="exit-retest-btn" onclick="exitRetest()">Exit re-test</button>
   </div>
 </div>
 
@@ -568,110 +579,107 @@ background: rgba(0,0,0,0.72); align-items: center; justify-content: center;
     <div id="settings-inner">
       <div class="s-title-row"><span class="s-title">Settings</span></div>
 
-```
-  <div class="s-sec">Note Sound</div>
-  <div id="sound-grid"></div>
+      <div class="s-sec">Note Sound</div>
+      <div id="sound-grid"></div>
 
-  <div class="s-sec">Note Range</div>
-  <div class="s-row">
-    <div><div class="s-label">Lowest Note</div><div class="s-sub">The lowest note that will be tested</div></div>
-    <div class="s-stepper">
-      <button class="step-btn" onclick="adjustSetting('lowestNote',-1)">−</button>
-      <div class="s-val" id="s-lowest">G3</div>
-      <button class="step-btn" onclick="adjustSetting('lowestNote',+1)">+</button>
-    </div>
-  </div>
-  <div class="s-row">
-    <div><div class="s-label">Highest Note</div><div class="s-sub">The highest note that will be tested</div></div>
-    <div class="s-stepper">
-      <button class="step-btn" onclick="adjustSetting('highestNote',-1)">−</button>
-      <div class="s-val" id="s-highest">D6</div>
-      <button class="step-btn" onclick="adjustSetting('highestNote',+1)">+</button>
-    </div>
-  </div>
+      <div class="s-sec">Note Range</div>
+      <div class="s-row">
+        <div><div class="s-label">Lowest Note</div><div class="s-sub">The lowest note that will be tested</div></div>
+        <div class="s-stepper">
+          <button class="step-btn" onclick="adjustSetting('lowestNote',-1)">−</button>
+          <div class="s-val" id="s-lowest">G3</div>
+          <button class="step-btn" onclick="adjustSetting('lowestNote',+1)">+</button>
+        </div>
+      </div>
+      <div class="s-row">
+        <div><div class="s-label">Highest Note</div><div class="s-sub">The highest note that will be tested</div></div>
+        <div class="s-stepper">
+          <button class="step-btn" onclick="adjustSetting('highestNote',-1)">−</button>
+          <div class="s-val" id="s-highest">D6</div>
+          <button class="step-btn" onclick="adjustSetting('highestNote',+1)">+</button>
+        </div>
+      </div>
 
-  <div class="s-sec">Difficulty</div>
-  <div class="s-row">
-    <div><div class="s-label">Starting Difference</div><div class="s-sub">The initial difference in notes</div></div>
-    <div class="s-stepper">
-      <!-- Reversed: + button = harder (fewer cents), − button = easier (more cents) -->
-      <button class="step-btn" onclick="adjustSetting('startCentsIdx',+1)">−</button>
-      <div class="s-val" id="s-start-cents">50¢</div>
-      <button class="step-btn" onclick="adjustSetting('startCentsIdx',-1)">+</button>
-    </div>
-  </div>
-  <div class="s-row">
-    <div><div class="s-label">Tests per Round</div><div class="s-sub">Correct tests needed to advance</div></div>
-    <div class="s-stepper">
-      <button class="step-btn" onclick="adjustSetting('testsPerRound',-1)">−</button>
-      <div class="s-val" id="s-tests-per-round">3</div>
-      <button class="step-btn" onclick="adjustSetting('testsPerRound',+1)">+</button>
-    </div>
-  </div>
+      <div class="s-sec">Difficulty</div>
+      <div class="s-row">
+        <div><div class="s-label">Starting Difference</div><div class="s-sub">The initial difference in notes</div></div>
+        <div class="s-stepper">
+          <!-- Reversed: + button = harder (fewer cents), − button = easier (more cents) -->
+          <button class="step-btn" onclick="adjustSetting('startCentsIdx',+1)">−</button>
+          <div class="s-val" id="s-start-cents">50¢</div>
+          <button class="step-btn" onclick="adjustSetting('startCentsIdx',-1)">+</button>
+        </div>
+      </div>
+      <div class="s-row">
+        <div><div class="s-label">Tests per Round</div><div class="s-sub">Correct tests needed to advance</div></div>
+        <div class="s-stepper">
+          <button class="step-btn" onclick="adjustSetting('testsPerRound',-1)">−</button>
+          <div class="s-val" id="s-tests-per-round">3</div>
+          <button class="step-btn" onclick="adjustSetting('testsPerRound',+1)">+</button>
+        </div>
+      </div>
 
-  <div class="s-sec">Note Length</div>
-  <div class="s-row">
-    <div><div class="s-label">Duration</div><div class="s-sub">Length of each note</div></div>
-    <div class="s-stepper">
-      <button class="step-btn" onclick="adjustSetting('noteDurIdx',-1)">−</button>
-      <div class="s-val" id="s-note-dur">2.2s</div>
-      <button class="step-btn" onclick="adjustSetting('noteDurIdx',+1)">+</button>
-    </div>
-  </div>
+      <div class="s-sec">Note Length</div>
+      <div class="s-row">
+        <div><div class="s-label">Duration</div><div class="s-sub">Length of each note</div></div>
+        <div class="s-stepper">
+          <button class="step-btn" onclick="adjustSetting('noteDurIdx',-1)">−</button>
+          <div class="s-val" id="s-note-dur">2.2s</div>
+          <button class="step-btn" onclick="adjustSetting('noteDurIdx',+1)">+</button>
+        </div>
+      </div>
 
-  <div class="s-sec">Tone Shape</div>
-  <div class="s-row">
-    <div><div class="s-label">Attack</div><div class="s-sub">How quickly the note rises</div></div>
-    <div class="s-stepper">
-      <button class="step-btn" onclick="adjustSetting('attack',-1)">−</button>
-      <div class="s-val" id="s-attack">Med</div>
-      <button class="step-btn" onclick="adjustSetting('attack',+1)">+</button>
-    </div>
-  </div>
-  <div class="s-row">
-    <div><div class="s-label">Decay</div><div class="s-sub">How gradually the note fades</div></div>
-    <div class="s-stepper">
-      <button class="step-btn" onclick="adjustSetting('decay',-1)">−</button>
-      <div class="s-val" id="s-decay">Med</div>
-      <button class="step-btn" onclick="adjustSetting('decay',+1)">+</button>
-    </div>
-  </div>
+      <div class="s-sec">Tone Shape</div>
+      <div class="s-row">
+        <div><div class="s-label">Attack</div><div class="s-sub">How quickly the note rises</div></div>
+        <div class="s-stepper">
+          <button class="step-btn" onclick="adjustSetting('attack',-1)">−</button>
+          <div class="s-val" id="s-attack">Med</div>
+          <button class="step-btn" onclick="adjustSetting('attack',+1)">+</button>
+        </div>
+      </div>
+      <div class="s-row">
+        <div><div class="s-label">Decay</div><div class="s-sub">How gradually the note fades</div></div>
+        <div class="s-stepper">
+          <button class="step-btn" onclick="adjustSetting('decay',-1)">−</button>
+          <div class="s-val" id="s-decay">Med</div>
+          <button class="step-btn" onclick="adjustSetting('decay',+1)">+</button>
+        </div>
+      </div>
 
-  <div class="s-sec">Gestures</div>
-  <div class="tog-row">
-    <div><div class="tog-label">Shake to Replay</div><div class="tog-sub">Shake phone to replay notes</div></div>
-    <label class="tog-sw">
-      <input type="checkbox" id="s-shake-chk" onchange="onShakeToggle(this.checked)">
-      <div class="tog-track"></div>
-      <div class="tog-thumb"></div>
-    </label>
-  </div>
+      <div class="s-sec">Gestures</div>
+      <div class="tog-row">
+        <div><div class="tog-label">Shake to Replay</div><div class="tog-sub">Shake phone to replay notes</div></div>
+        <label class="tog-sw">
+          <input type="checkbox" id="s-shake-chk" onchange="onShakeToggle(this.checked)">
+          <div class="tog-track"></div>
+          <div class="tog-thumb"></div>
+        </label>
+      </div>
 
-  <div class="s-sec">Diagnostics</div>
-  <div class="tog-row">
-    <div>
-      <div class="s-label">Enable Logging</div>
-      <div class="s-sub">Logs actions to local storage for debugging</div>
+      <div class="s-sec">Diagnostics</div>
+      <div class="tog-row">
+        <div>
+          <div class="s-label">Enable Logging</div>
+          <div class="s-sub">Logs actions to local storage for debugging</div>
+        </div>
+        <label class="tog-sw">
+          <input type="checkbox" id="s-logging-chk" onchange="onLoggingToggle(this.checked)">
+          <div class="tog-track"></div>
+          <div class="tog-thumb"></div>
+        </label>
+      </div>
+      <div class="s-row" id="s-copy-log-row" style="display:none;">
+        <div><div class="s-label">Debug Log</div><div class="s-sub" id="s-log-count">0 entries</div></div>
+        <div style="display:flex;gap:8px;">
+          <button id="s-copy-log-btn" class="log-action-btn" onclick="copyLog()">Copy</button>
+          <button class="log-action-btn" onclick="clearLog()">Clear</button>
+        </div>
+      </div>
+
+      <button id="s-reset-btn" onclick="openResetDefaults()">Reset to defaults…</button>
+      <div style="height:28px"></div>
     </div>
-    <label class="tog-sw">
-      <input type="checkbox" id="s-logging-chk" onchange="onLoggingToggle(this.checked)">
-      <div class="tog-track"></div>
-      <div class="tog-thumb"></div>
-    </label>
-  </div>
-  <div class="s-row" id="s-copy-log-row" style="display:none;">
-    <div><div class="s-label">Debug Log</div><div class="s-sub" id="s-log-count">0 entries</div></div>
-    <div style="display:flex;gap:8px;">
-      <button class="step-btn" onclick="copyLog()" style="width:auto;padding:0 14px;font-size:clamp(12px,3vw,14px);">Copy</button>
-      <button class="step-btn" onclick="clearLog()" style="width:auto;padding:0 14px;font-size:clamp(12px,3vw,14px);">Clear</button>
-    </div>
-  </div>
-
-  <button id="s-reset-btn" onclick="openResetDefaults()">Reset to defaults…</button>
-  <div style="height:28px"></div>
-</div>
-```
-
   </div>
 </div>
 
@@ -735,36 +743,33 @@ background: rgba(0,0,0,0.72); align-items: center; justify-content: center;
     <div class="info-sec">Average Score</div>
     <div id="overall-score" style="font-size:clamp(28px,8vw,40px);font-weight:600;letter-spacing:-0.01em;color:#7a2900;text-align:center;padding:8px 0 4px;">—</div>
 
-```
-<div class="info-sec">Score Chart</div>
-<div id="stats-chart-wrap"><canvas id="stats-chart"></canvas></div>
+    <div class="info-sec">Score Chart</div>
+    <div id="stats-chart-wrap"><canvas id="stats-chart"></canvas></div>
 
-<div class="info-sec">Scores</div>
-<table id="stats-table">
-  <colgroup><col><col><col><col></colgroup>
-  <thead><tr><th>Note</th><th>Best</th><th>Failed</th><th></th></tr></thead>
-  <tbody id="stats-tbody"></tbody>
-</table>
-<button id="info-global-reset" onclick="confirmResetAll()">Reset All Scores</button>
-<button id="info-fake-history" onclick="fakeHistory()"
-  style="-webkit-appearance:none;font-family:var(--font);font-size:clamp(13px,3.5vw,15px);
-  padding:10px 22px;border-radius:999px;cursor:pointer;
-  border:1.5px solid rgba(60,100,180,0.40);background:rgba(60,100,180,0.10);color:#1a3a7a;
-  align-self:flex-start;margin-top:0;transition:background 0.15s;">
-  Fake Scores
-</button>
+    <div class="info-sec">Scores</div>
+    <table id="stats-table">
+      <colgroup><col><col><col><col></colgroup>
+      <thead><tr><th>Note</th><th>Best</th><th>Failed</th><th></th></tr></thead>
+      <tbody id="stats-tbody"></tbody>
+    </table>
+    <button id="info-global-reset" onclick="confirmResetAll()">Reset All Scores</button>
+    <button id="info-fake-history" onclick="fakeHistory()"
+      style="-webkit-appearance:none;font-family:var(--font);font-size:clamp(13px,3.5vw,15px);
+      padding:10px 22px;border-radius:999px;cursor:pointer;
+      border:1.5px solid rgba(60,100,180,0.40);background:rgba(60,100,180,0.10);color:#1a3a7a;
+      align-self:flex-start;margin-top:0;transition:background 0.15s;">
+      Fake Scores
+    </button>
 
-<p style="font-size:clamp(11px,3vw,13px);color:rgba(0,0,0,0.40);line-height:1.6;margin-top:4px;">
-  Instrument samples from the <a href="https://github.com/gleitz/midi-js-soundfonts" target="_blank" style="color:rgba(0,0,0,0.50);">MusyngKite soundfont</a>, used under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" style="color:rgba(0,0,0,0.50);">CC BY-SA 3.0</a>.
-</p>
-<button id="info-close-btn-bottom" onclick="closeInfo()">
-  <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
-    <circle cx="17" cy="17" r="15" stroke="currentColor" stroke-width="1.8" fill="none"/>
-    <path d="M11 11 L23 23M23 11 L11 23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-  </svg>
-</button>
-```
-
+    <p style="font-size:clamp(11px,3vw,13px);color:rgba(0,0,0,0.40);line-height:1.6;margin-top:4px;">
+      Instrument samples from the <a href="https://github.com/gleitz/midi-js-soundfonts" target="_blank" style="color:rgba(0,0,0,0.50);">MusyngKite soundfont</a>, used under <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" style="color:rgba(0,0,0,0.50);">CC BY-SA 3.0</a>.
+    </p>
+    <button id="info-close-btn-bottom" onclick="closeInfo()">
+      <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
+        <circle cx="17" cy="17" r="15" stroke="currentColor" stroke-width="1.8" fill="none"/>
+        <path d="M11 11 L23 23M23 11 L11 23" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
   </div>
 </div>
 
@@ -781,24 +786,21 @@ background: rgba(0,0,0,0.72); align-items: center; justify-content: center;
   </div>
 </div>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
-
-// ══════════════════════════════════════════════════════
-// SOUND DEFINITIONS
+<script>
 // ══════════════════════════════════════════════════════
 // SOUND DEFINITIONS — soundfont-player uses gleitz MusyngKite by default
 // ══════════════════════════════════════════════════════
 const SOUNDS = [
-{ id:‘violin’,        label:‘Violin (sample)’,    type:‘sf’, sfName:‘violin’                },
-{ id:‘synth-violin’,  label:‘Violin (synth)’,    type:‘synth’                              },
-{ id:‘sine’,          label:‘Sine Wave’,          type:‘sine’                               },
-{ id:‘viola’,         label:‘Viola’,              type:‘sf’, sfName:‘viola’                 },
-{ id:‘cello’,         label:‘Cello’,              type:‘sf’, sfName:‘cello’                 },
-{ id:‘contrabass’,    label:‘Contrabass’,         type:‘sf’, sfName:‘contrabass’            },
-{ id:‘gtr-nylon’,     label:‘Guitar (nylon)’,     type:‘sf’, sfName:‘acoustic_guitar_nylon’ },
-{ id:‘gtr-steel’,     label:‘Guitar (steel)’,     type:‘sf’, sfName:‘acoustic_guitar_steel’ },
-{ id:‘piano’,         label:‘Piano’,              type:‘sf’, sfName:‘acoustic_grand_piano’  },
-{ id:‘elec-bass’,     label:‘Electric Bass’,      type:‘sf’, sfName:‘electric_bass_finger’  },
+{ id:'violin',        label:'Violin (sample)',    type:'sf', sfName:'violin'                },
+{ id:'synth-violin',  label:'Violin (synth)',    type:'synth'                              },
+{ id:'sine',          label:'Sine Wave',          type:'sine'                               },
+{ id:'viola',         label:'Viola',              type:'sf', sfName:'viola'                 },
+{ id:'cello',         label:'Cello',              type:'sf', sfName:'cello'                 },
+{ id:'contrabass',    label:'Contrabass',         type:'sf', sfName:'contrabass'            },
+{ id:'gtr-nylon',     label:'Guitar (nylon)',     type:'sf', sfName:'acoustic_guitar_nylon' },
+{ id:'gtr-steel',     label:'Guitar (steel)',     type:'sf', sfName:'acoustic_guitar_steel' },
+{ id:'piano',         label:'Piano',              type:'sf', sfName:'acoustic_grand_piano'  },
+{ id:'elec-bass',     label:'Electric Bass',      type:'sf', sfName:'electric_bass_finger'  },
 ];
 
 // ══════════════════════════════════════════════════════
@@ -806,19 +808,19 @@ const SOUNDS = [
 // ══════════════════════════════════════════════════════
 const CENTS_SEQ   = [100, 50, 25, 20, 15, 10, 7, 6, 5, 4.5, 4.0, 3.5, 3.0, 2.5, 2.0, 1.5, 1.0, 0.5];
 const MAX_CENTS   = CENTS_SEQ[0]; // 100 — largest/easiest difference
-const fmtC        = c => Number.isInteger(c) ? c+‘¢’ : c.toFixed(1)+‘¢’; // format cents value
+const fmtC        = c => Number.isInteger(c) ? c+'¢' : c.toFixed(1)+'¢'; // format cents value
 const DUR_STEPS   = [0.8, 1.2, 1.6, 2.0, 2.2, 2.8, 3.5, 4.5];
-const ATK_PRESETS = [[‘Soft’,0.20],[‘Med’,0.09],[‘Crisp’,0.04]];
-const DEC_PRESETS = [[‘Long’,0.60],[‘Med’,0.28],[‘Short’,0.12]];
+const ATK_PRESETS = [['Soft',0.20],['Med',0.09],['Crisp',0.04]];
+const DEC_PRESETS = [['Long',0.60],['Med',0.28],['Short',0.12]];
 const NOTE_GAP    = 0.42;
 
 // All notes A1–G7 (MIDI 33–103)
 const ALL_NOTES = (function(){
-const nm=[‘C’,‘C#’,‘D’,‘D#’,‘E’,‘F’,‘F#’,‘G’,‘G#’,‘A’,‘A#’,‘B’], out=[];
+const nm=['C','C#','D','D#','E','F','F#','G','G#','A','A#','B'], out=[];
 for (let midi=33; midi<=103; midi++) {
-const n = midi % 12;
-const o = Math.floor(midi/12) - 1;
-out.push({name: nm[n]+o, midi});
+  const n = midi % 12;
+  const o = Math.floor(midi/12) - 1;
+  out.push({name: nm[n]+o, midi});
 }
 return out;
 })();
@@ -826,14 +828,14 @@ return out;
 const midiToHz  = m => 440 * Math.pow(2, (m-69)/12);
 const centsToHz = (hz,c) => hz * Math.pow(2, c/1200);
 const hzToMidi  = hz => 69 + 12*Math.log2(hz/440);
-const dn        = name => name.replace(’#’,‘♯’);
+const dn        = name => name.replace('#','♯');
 
 // ══════════════════════════════════════════════════════
 // STATE
 // ══════════════════════════════════════════════════════
 let settings = {
-lowestNote:22, highestNote:53,
-startCentsIdx:5, noteDurIdx:3, attack:1, decay:1, soundIdx:0, testsPerRound:3, shakeToReplay:false,
+  lowestNote:22, highestNote:53,
+  startCentsIdx:5, noteDurIdx:3, attack:1, decay:1, soundIdx:0, testsPerRound:3, shakeToReplay:false,
 };
 let stats = {}; // noteName → { bestCents, attempts }
 
@@ -860,70 +862,83 @@ let playingNode2   = null;
 // ══════════════════════════════════════════════════════
 function loadState() {
 try {
-const s=localStorage.getItem(‘vio4-settings’);
-if(s) Object.assign(settings, JSON.parse(s));
-// Clamp note range to valid indices (guards against stale saved values)
-settings.lowestNote  = Math.max(0, Math.min(ALL_NOTES.length-2, settings.lowestNote));
-settings.highestNote = Math.max(settings.lowestNote+1, Math.min(ALL_NOTES.length-1, settings.highestNote));
-const t=localStorage.getItem(‘vio4-stats’); if(t) stats=JSON.parse(t);
+  const s=localStorage.getItem('vio4-settings');
+  if(s) Object.assign(settings, JSON.parse(s));
+  // Clamp note range to valid indices (guards against stale saved values)
+  settings.lowestNote  = Math.max(0, Math.min(ALL_NOTES.length-2, settings.lowestNote));
+  settings.highestNote = Math.max(settings.lowestNote+1, Math.min(ALL_NOTES.length-1, settings.highestNote));
+  const t=localStorage.getItem('vio4-stats'); if(t) stats=JSON.parse(t);
 } catch(e){}
 }
-function saveSettings() { try{localStorage.setItem(‘vio4-settings’,JSON.stringify(settings));}catch(e){} }
-function saveStats()    { try{localStorage.setItem(‘vio4-stats’,   JSON.stringify(stats));}catch(e){} }
+function saveSettings() { try{localStorage.setItem('vio4-settings',JSON.stringify(settings));}catch(e){} }
+function saveStats()    { try{localStorage.setItem('vio4-stats',   JSON.stringify(stats));}catch(e){} }
 
 // ══════════════════════════════════════════════════════
 // LOGGING SYSTEM
 // ══════════════════════════════════════════════════════
-const LOG_KEY     = ‘vio4-log’;
+const LOG_KEY     = 'vio4-log';
 const LOG_MAX     = 200;
 let   loggingEnabled = false;
 
 function loadLoggingState() {
-try { loggingEnabled = localStorage.getItem(‘vio4-logging’) === ‘1’; } catch(e){}
+try { loggingEnabled = localStorage.getItem('vio4-logging') === '1'; } catch(e){}
 }
 function logEvent(msg) {
 if (!loggingEnabled) return;
 try {
-const entries = JSON.parse(localStorage.getItem(LOG_KEY) || ‘[]’);
-const ts = new Date().toISOString().replace(‘T’,’ ‘).slice(0,22);
-entries.push(`[${ts}] ${msg}`);
-if (entries.length > LOG_MAX) entries.splice(0, entries.length - LOG_MAX);
-localStorage.setItem(LOG_KEY, JSON.stringify(entries));
+  const entries = JSON.parse(localStorage.getItem(LOG_KEY) || '[]');
+  const ts = new Date().toISOString().replace('T',' ').slice(0,22);
+  entries.push(`[${ts}] ${msg}`);
+  if (entries.length > LOG_MAX) entries.splice(0, entries.length - LOG_MAX);
+  localStorage.setItem(LOG_KEY, JSON.stringify(entries));
 } catch(e){}
 }
 function onLoggingToggle(val) {
 loggingEnabled = val;
-try { localStorage.setItem(‘vio4-logging’, val ? ‘1’ : ‘0’); } catch(e){}
+try { localStorage.setItem('vio4-logging', val ? '1' : '0'); } catch(e){}
 updateLogUI();
-if (val) logEvent(‘Logging enabled’);
+if (val) logEvent('Logging enabled');
 }
+
+// ── CHANGED: copyLog now shows "Copied!" feedback on the button ──
 function copyLog() {
 try {
-const entries = JSON.parse(localStorage.getItem(LOG_KEY) || ‘[]’);
-const text = entries.join(’\n’) || ‘(empty)’;
-navigator.clipboard.writeText(text).catch(() => {
-// Fallback: prompt with text
-prompt(‘Copy log:’, text);
-});
-logEvent(‘Log copied’);
+  const entries = JSON.parse(localStorage.getItem(LOG_KEY) || '[]');
+  const text = entries.join('\n') || '(empty)';
+  const btn = document.getElementById('s-copy-log-btn');
+  navigator.clipboard.writeText(text).then(() => {
+    if (btn) {
+      btn.textContent = 'Copied!';
+      btn.classList.add('feedback');
+      setTimeout(() => {
+        btn.textContent = 'Copy';
+        btn.classList.remove('feedback');
+      }, 1800);
+    }
+  }).catch(() => {
+    // Fallback: prompt with text
+    prompt('Copy log:', text);
+  });
+  logEvent('Log copied');
 } catch(e){}
 }
+
 function clearLog() {
 try { localStorage.removeItem(LOG_KEY); } catch(e){}
 updateLogUI();
-logEvent(‘Log cleared’);
+logEvent('Log cleared');
 }
 function updateLogUI() {
-const chk = $(‘s-logging-chk’);
+const chk = $('s-logging-chk');
 if (chk) chk.checked = loggingEnabled;
-const row = $(‘s-copy-log-row’);
-if (row) row.style.display = loggingEnabled ? ‘’ : ‘none’;
+const row = $('s-copy-log-row');
+if (row) row.style.display = loggingEnabled ? '' : 'none';
 if (loggingEnabled) {
-try {
-const entries = JSON.parse(localStorage.getItem(LOG_KEY) || ‘[]’);
-const el = $(‘s-log-count’);
-if (el) el.textContent = `${entries.length} entries`;
-} catch(e){}
+  try {
+    const entries = JSON.parse(localStorage.getItem(LOG_KEY) || '[]');
+    const el = $('s-log-count');
+    if (el) el.textContent = `${entries.length} entries`;
+  } catch(e){}
 }
 }
 
@@ -931,48 +946,48 @@ if (el) el.textContent = `${entries.length} entries`;
 // BACKGROUND COLOR SYNC (keeps Safari bottom bar in sync)
 // ══════════════════════════════════════════════════════
 function setBg(color) {
-$(‘bg-fill’).style.backgroundColor = color;
+$('bg-fill').style.backgroundColor = color;
 document.body.style.backgroundColor = color;
 document.documentElement.style.backgroundColor = color;
-const mt = document.getElementById(‘meta-theme’);
-if (mt) mt.setAttribute(‘content’, color);
+const mt = document.getElementById('meta-theme');
+if (mt) mt.setAttribute('content', color);
 }
 
 async function ensureAudio() {
 if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-if (audioCtx.state === ‘suspended’) {
-try { await audioCtx.resume(); } catch(e){}
+if (audioCtx.state === 'suspended') {
+  try { await audioCtx.resume(); } catch(e){}
 }
 }
 
 // iOS sometimes caches font sizes across orientation changes — force recalc
-window.addEventListener(‘orientationchange’, () => {
+window.addEventListener('orientationchange', () => {
 setTimeout(() => {
-document.querySelectorAll(’.hint-text’).forEach(el => {
-el.style.fontSize = ‘’;  // clear any inline override
-});
+  document.querySelectorAll('.hint-text').forEach(el => {
+    el.style.fontSize = '';
+  });
 }, 100);
 });
-document.addEventListener(‘visibilitychange’, () => {
-if (document.visibilityState === ‘visible’ && audioCtx) {
-logEvent(`visibilitychange → visible | audioCtx.state=${audioCtx.state}`);
-audioCtx.resume().catch(()=>{});
-} else if (document.visibilityState === ‘hidden’) {
-logEvent(`visibilitychange → hidden | audioCtx.state=${audioCtx ? audioCtx.state : 'null'}`);
+document.addEventListener('visibilitychange', () => {
+if (document.visibilityState === 'visible' && audioCtx) {
+  logEvent(`visibilitychange → visible | audioCtx.state=${audioCtx.state}`);
+  audioCtx.resume().catch(()=>{});
+} else if (document.visibilityState === 'hidden') {
+  logEvent(`visibilitychange → hidden | audioCtx.state=${audioCtx ? audioCtx.state : 'null'}`);
 }
 });
-window.addEventListener(‘pageshow’, (e) => {
+window.addEventListener('pageshow', (e) => {
 logEvent(`pageshow | persisted=${e.persisted} | audioCtx.state=${audioCtx ? audioCtx.state : 'null'}`);
 if (audioCtx) audioCtx.resume().catch(()=>{});
 // iOS BFCache restores DOM inline styles including visibility:hidden set by openInfo
 // Always reset to ensure app is visible on restore
-if ($(‘app’)) {
-$(‘app’).style.visibility = ‘’;
-$(‘swipe-hint’).style.visibility = ‘’;
-$(‘info-overlay’).classList.remove(‘open’);
+if ($('app')) {
+  $('app').style.visibility = '';
+  $('swipe-hint').style.visibility = '';
+  $('info-overlay').classList.remove('open');
 }
 });
-window.addEventListener(‘focus’, () => {
+window.addEventListener('focus', () => {
 if (audioCtx) audioCtx.resume().catch(()=>{});
 });
 
@@ -987,24 +1002,24 @@ async function loadSfInstrument(sfName) {
 if (sfInstruments[sfName]) return sfInstruments[sfName];
 if (sfLoadingP[sfName])    return sfLoadingP[sfName];
 sfLoadingP[sfName] = Soundfont.instrument(audioCtx, sfName, {
-from: ‘https://caseymullen.github.io/microbreaker/ear/sounds/’,
-gain: 1.0,
+  from: 'https://caseymullen.github.io/microbreaker/ear/sounds/',
+  gain: 1.0,
 }).then(inst => {
-sfInstruments[sfName] = inst;
-return inst;
+  sfInstruments[sfName] = inst;
+  return inst;
 });
 return sfLoadingP[sfName];
 }
 
 // ══════════════════════════════════════════════════════
-// PLAY FUNCTIONS — all return a handle with stopAt(t)
+// PLAY FUNCTIONS — all return a handle with stopAt()
 // ══════════════════════════════════════════════════════
 function playSfNote(inst, midiF, startTime, duration) {
 // soundfont-player: inst.play(note, time, options) — accepts fractional midi for detuning
 // Returns an AudioNode with .stop(when)
 const node = inst.play(midiF, startTime, { duration: duration, gain: 4.5 });
 return {
-stopAt(t) { try { node.stop(t); } catch(e){} }
+  stopAt(t) { try { node.stop(t); } catch(e){} }
 };
 }
 
@@ -1027,13 +1042,13 @@ vG.gain.setValueAtTime(0,startTime); vG.gain.linearRampToValueAtTime(freqHz*0.00
 vLFO.connect(vG); vLFO.start(startTime); vLFO.stop(startTime+duration+0.05);
 
 [[1,1.00],[2,0.58],[3,0.40],[4,0.22],[5,0.16],[6,0.09],[7,0.06],[8,0.04]].forEach(([m,g])=>{
-const osc=ctx.createOscillator(),hg=ctx.createGain(),bp=ctx.createBiquadFilter();
-osc.type=‘sawtooth’; osc.frequency.setValueAtTime(freqHz*m,startTime);
-vG.connect(osc.frequency);
-bp.type=‘bandpass’; bp.frequency.setValueAtTime(freqHz*m,startTime); bp.Q.setValueAtTime(1.8,startTime);
-hg.gain.setValueAtTime(g,startTime);
-osc.connect(bp); bp.connect(hg); hg.connect(mg);
-osc.start(startTime); osc.stop(startTime+duration+0.1);
+  const osc=ctx.createOscillator(),hg=ctx.createGain(),bp=ctx.createBiquadFilter();
+  osc.type='sawtooth'; osc.frequency.setValueAtTime(freqHz*m,startTime);
+  vG.connect(osc.frequency);
+  bp.type='bandpass'; bp.frequency.setValueAtTime(freqHz*m,startTime); bp.Q.setValueAtTime(1.8,startTime);
+  hg.gain.setValueAtTime(g,startTime);
+  osc.connect(bp); bp.connect(hg); hg.connect(mg);
+  osc.start(startTime); osc.stop(startTime+duration+0.1);
 });
 
 const bLen=Math.ceil(ctx.sampleRate*(duration+0.2));
@@ -1041,7 +1056,7 @@ const bBuf=ctx.createBuffer(1,bLen,ctx.sampleRate);
 const bd=bBuf.getChannelData(0);
 for(let i=0;i<bLen;i++) bd[i]=(Math.random()*2-1)*0.025;
 const bs=ctx.createBufferSource(),bf=ctx.createBiquadFilter(),bg=ctx.createGain();
-bs.buffer=bBuf; bf.type=‘bandpass’; bf.frequency.setValueAtTime(freqHz,startTime); bf.Q.setValueAtTime(3,startTime);
+bs.buffer=bBuf; bf.type='bandpass'; bf.frequency.setValueAtTime(freqHz,startTime); bf.Q.setValueAtTime(3,startTime);
 bg.gain.setValueAtTime(0,startTime); bg.gain.linearRampToValueAtTime(0.5,startTime+atk);
 bg.gain.setValueAtTime(0.5,startTime+duration-rel); bg.gain.linearRampToValueAtTime(0,startTime+duration);
 bs.connect(bf); bf.connect(bg); bg.connect(mg);
@@ -1055,7 +1070,7 @@ const ctx = audioCtx;
 const atk = ATK_PRESETS[settings.attack][1];
 const rel = DEC_PRESETS[settings.decay][1];
 const osc=ctx.createOscillator(), g=ctx.createGain();
-osc.type=‘sine’; osc.frequency.setValueAtTime(freqHz,startTime);
+osc.type='sine'; osc.frequency.setValueAtTime(freqHz,startTime);
 g.gain.setValueAtTime(0,startTime); g.gain.linearRampToValueAtTime(0.40,startTime+atk);
 g.gain.setValueAtTime(0.40,startTime+duration-rel); g.gain.linearRampToValueAtTime(0,startTime+duration);
 osc.connect(g); g.connect(ctx.destination);
@@ -1067,8 +1082,8 @@ return { gain:g, stopAt(t){ g.gain.cancelScheduledValues(t); g.gain.setValueAtTi
 async function playNote(midiF, startTime, duration) {
 const sound = SOUNDS[settings.soundIdx];
 const hz    = midiToHz(midiF);
-if (sound.type===‘synth’) return playSynthViolin(hz, startTime, duration);
-if (sound.type===‘sine’)  return playSineTone(hz, startTime, duration);
+if (sound.type==='synth') return playSynthViolin(hz, startTime, duration);
+if (sound.type==='sine')  return playSineTone(hz, startTime, duration);
 // SF via soundfont-player
 const inst = sfInstruments[sound.sfName];
 if (inst) return playSfNote(inst, midiF, startTime, duration);
@@ -1080,7 +1095,7 @@ return playSynthViolin(hz, startTime, duration); // fallback while loading
 // ══════════════════════════════════════════════════════
 function beepCorrect() {
 const ctx=audioCtx,t=ctx.currentTime+0.02;
-[523.25,659.25].forEach((f,i)=>{ const o=ctx.createOscillator(),g=ctx.createGain(); o.type=‘sine’; o.frequency.setValueAtTime(f,t+i*0.12); g.gain.setValueAtTime(0.16,t+i*0.12); g.gain.exponentialRampToValueAtTime(0.001,t+i*0.12+0.22); o.connect(g); g.connect(ctx.destination); o.start(t+i*0.12); o.stop(t+i*0.12+0.25); });
+[523.25,659.25].forEach((f,i)=>{ const o=ctx.createOscillator(),g=ctx.createGain(); o.type='sine'; o.frequency.setValueAtTime(f,t+i*0.12); g.gain.setValueAtTime(0.16,t+i*0.12); g.gain.exponentialRampToValueAtTime(0.001,t+i*0.12+0.22); o.connect(g); g.connect(ctx.destination); o.start(t+i*0.12); o.stop(t+i*0.12+0.25); });
 }
 function chimeSuccess() {
 // Boxing ring bell: A4 (440Hz), single strike, 2.5s decay
@@ -1090,24 +1105,24 @@ const dur   = 2.5;
 const gain  = 0.12;
 const delay = 0;
 const partials = [
-{ ratio: 1.000, gainFrac: 1.00, durFrac: 1.0 },
-{ ratio: 2.756, gainFrac: 0.50, durFrac: 0.7 },
-{ ratio: 5.404, gainFrac: 0.25, durFrac: 0.5 },
-{ ratio: 8.933, gainFrac: 0.12, durFrac: 0.3 },
+  { ratio: 1.000, gainFrac: 1.00, durFrac: 1.0 },
+  { ratio: 2.756, gainFrac: 0.50, durFrac: 0.7 },
+  { ratio: 5.404, gainFrac: 0.25, durFrac: 0.5 },
+  { ratio: 8.933, gainFrac: 0.12, durFrac: 0.3 },
 ];
 partials.forEach(({ ratio, gainFrac, durFrac }) => {
-const t = audioCtx.currentTime + delay;
-const g = audioCtx.createGain();
-const o = audioCtx.createOscillator();
-o.type = ‘sine’;
-o.frequency.value = freq * ratio;
-g.gain.setValueAtTime(0, t);
-g.gain.linearRampToValueAtTime(gain * gainFrac, t + 0.003);
-g.gain.exponentialRampToValueAtTime(0.0001, t + dur * durFrac);
-o.connect(g);
-g.connect(audioCtx.destination);
-o.start(t);
-o.stop(t + dur * durFrac + 0.05);
+  const t = audioCtx.currentTime + delay;
+  const g = audioCtx.createGain();
+  const o = audioCtx.createOscillator();
+  o.type = 'sine';
+  o.frequency.value = freq * ratio;
+  g.gain.setValueAtTime(0, t);
+  g.gain.linearRampToValueAtTime(gain * gainFrac, t + 0.003);
+  g.gain.exponentialRampToValueAtTime(0.0001, t + dur * durFrac);
+  o.connect(g);
+  g.connect(audioCtx.destination);
+  o.start(t);
+  o.stop(t + dur * durFrac + 0.05);
 });
 }
 
@@ -1120,7 +1135,7 @@ const harmonics = [1, 2, 3, 4.2];
 const gains     = [0.18, 0.10, 0.05, 0.02];
 harmonics.forEach((h, i) => {
 const o = ctx.createOscillator(), g = ctx.createGain();
-o.type = ‘sine’;
+o.type = 'sine';
 o.frequency.setValueAtTime(fundamental * h, t);
 g.gain.setValueAtTime(0, t);
 g.gain.linearRampToValueAtTime(gains[i], t + 0.008);
@@ -1130,15 +1145,14 @@ o.start(t); o.stop(t + 3.1);
 });
 }
 */
+
 function beepWrong() {
 const ctx=audioCtx,t=ctx.currentTime+0.02;
-[220,196].forEach((f,i)=>{ const o=ctx.createOscillator(),g=ctx.createGain(); o.type=‘triangle’; o.frequency.setValueAtTime(f,t+i*0.15); g.gain.setValueAtTime(0.16,t+i*0.15); g.gain.exponentialRampToValueAtTime(0.001,t+i*0.15+0.42); o.connect(g); g.connect(ctx.destination); o.start(t+i*0.15); o.stop(t+i*0.15+0.48); });
+[220,196].forEach((f,i)=>{ const o=ctx.createOscillator(),g=ctx.createGain(); o.type='triangle'; o.frequency.setValueAtTime(f,t+i*0.15); g.gain.setValueAtTime(0.16,t+i*0.15); g.gain.exponentialRampToValueAtTime(0.001,t+i*0.15+0.42); o.connect(g); g.connect(ctx.destination); o.start(t+i*0.15); o.stop(t+i*0.15+0.48); });
 }
 
 // ══════════════════════════════════════════════════════
 // NOTE SELECTION
-// Untested notes first. Then weighted by bestCents (higher = more practice needed).
-// Regressed notes (lastFailureCents < bestCents) get 25% extra weight.
 // ══════════════════════════════════════════════════════
 function isRegressed(noteName) {
 const st = stats[noteName];
@@ -1149,20 +1163,16 @@ function pickNote() {
 if (retestNote) return ALL_NOTES.find(n=>n.name===retestNote);
 
 const pool = ALL_NOTES.slice(settings.lowestNote, settings.highestNote+1);
-
-// Any untested?
 const untested = pool.filter(n => !stats[n.name] || stats[n.name].attempts == null || stats[n.name].attempts === 0);
 if (untested.length > 0) {
-return untested[Math.floor(Math.random()*untested.length)];
+  return untested[Math.floor(Math.random()*untested.length)];
 }
-
-// All tested — weight by bestCents + 25% bonus for regressions
 const weights = pool.map(n => noteWeight(n.name));
 const total = weights.reduce((a,b)=>a+b, 0);
 let r = Math.random() * total;
 for (let i=0; i<pool.length; i++) {
-r -= weights[i];
-if (r <= 0) return pool[i];
+  r -= weights[i];
+  if (r <= 0) return pool[i];
 }
 return pool[pool.length-1];
 }
@@ -1180,7 +1190,7 @@ function noteDur() { return DUR_STEPS[settings.noteDurIdx]; }
 function startRound() {
 awaiting=false; roundFailed=false;
 roundAttempts=0; roundResults=[];
-$(‘round-actions’).style.display=‘none’; hideRetestEndActions();
+$('round-actions').style.display='none'; hideRetestEndActions();
 clearProgress();
 
 const prevNote = currentNote;
@@ -1189,59 +1199,49 @@ markAttempt(note.name);
 saveStats();
 logEvent(`startRound | note=${note.name} | cents=${fmtC(CENTS_SEQ[centsIdx])} | retest=${retestNote||'none'}`);
 
-// In retest mode, centsIdx was already set correctly by handleAnswer — never override it.
-// In random mode: if switching to a note with bestCents, start there.
-// If it’s the very first note with no bestCents, use startCentsIdx.
-// Otherwise carry forward centsIdx from previous round’s success/fail.
 if (!retestNote) {
-const bestCents = stats[note.name]?.bestCents;
-if (bestCents != null) {
-let idx = CENTS_SEQ.findIndex(c => c <= bestCents);
-if (idx < 0) idx = CENTS_SEQ.length - 1;
-centsIdx = idx;
-} else if (prevNote === null) {
-centsIdx = settings.startCentsIdx;
-}
-// else: keep current centsIdx
+  const bestCents = stats[note.name]?.bestCents;
+  if (bestCents != null) {
+    let idx = CENTS_SEQ.findIndex(c => c <= bestCents);
+    if (idx < 0) idx = CENTS_SEQ.length - 1;
+    centsIdx = idx;
+  } else if (prevNote === null) {
+    centsIdx = settings.startCentsIdx;
+  }
 }
 
 setupAttempt();
 }
 
-// Called for each new attempt within a round (same note, same cents level)
 function setupAttempt() {
 const cents = CENTS_SEQ[centsIdx];
-// Each attempt: randomly pick which note is the “off” one and which direction
-const offIsSecond  = Math.random() < 0.5; // true=right circle is off, false=left circle is off
-const offIsHigher  = Math.random() < 0.5; // true=off note is sharp, false=off note is flat
+const offIsSecond  = Math.random() < 0.5;
+const offIsHigher  = Math.random() < 0.5;
 currentRound.offIsSecond = offIsSecond;
 currentRound.offIsHigher = offIsHigher;
-// The “higher” note is whichever side has the off-higher or the reference when off is flat
-// secondIsHigher: true if the right circle’s note is higher pitch
 currentRound.secondIsHigher = offIsSecond ? offIsHigher : !offIsHigher;
 
 const baseHz  = midiToHz(currentNote.midi);
 const offHz   = offIsHigher ? centsToHz(baseHz, cents) : centsToHz(baseHz, -cents);
-// note1Midi = left circle, note2Midi = right circle
 currentRound.note1Midi = offIsSecond ? currentNote.midi : hzToMidi(offHz);
 currentRound.note2Midi = offIsSecond ? hzToMidi(offHz)  : currentNote.midi;
 currentRound.cents     = cents;
 
 const nd = dn(currentNote.name);
-$(‘note-left-name’).textContent   = nd;
-$(‘note-left-detail’).innerHTML   = ‘<span style="font-size:1.6em;opacity:0.55;">?</span>’;
-$(‘note-right-name’).textContent   = nd;
-$(‘note-right-detail’).innerHTML  = ‘<span style="font-size:1.6em;opacity:0.55;">?</span>’;
-$(‘note-left’).className  = ‘note-circle’;
-$(‘note-right’).className = ‘note-circle’;
-$(‘status-msg’).textContent = ‘’;
-$(‘status-msg’).style.color = ‘#e8d5b0’;
-$(‘diff-value’).textContent = fmtC(CENTS_SEQ[centsIdx]);
-$(‘swipe-hint’).style.display=’’;
+$('note-left-name').textContent   = nd;
+$('note-left-detail').innerHTML   = '<span style="font-size:1.6em;opacity:0.55;">?</span>';
+$('note-right-name').textContent   = nd;
+$('note-right-detail').innerHTML  = '<span style="font-size:1.6em;opacity:0.55;">?</span>';
+$('note-left').className  = 'note-circle';
+$('note-right').className = 'note-circle';
+$('status-msg').textContent = '';
+$('status-msg').style.color = '#e8d5b0';
+$('diff-value').textContent = fmtC(CENTS_SEQ[centsIdx]);
+$('swipe-hint').style.display='';
 playBothNotes();
 }
 
-let playTimers = []; // pending setTimeout IDs for note highlighting
+let playTimers = [];
 function clearPlayTimers() { playTimers.forEach(clearTimeout); playTimers=[]; }
 
 async function playBothNotes() {
@@ -1257,18 +1257,17 @@ const t1endMs = t1ms + dur*1000;
 const t2ms    = t1ms + (dur+NOTE_GAP)*1000;
 const t2endMs = t2ms + dur*1000;
 
-$(‘note-left’).classList.remove(‘playing’,‘flash-correct’,‘flash-wrong’);
-$(‘note-right’).classList.remove(‘playing’,‘flash-correct’,‘flash-wrong’);
+$('note-left').classList.remove('playing','flash-correct','flash-wrong');
+$('note-right').classList.remove('playing','flash-correct','flash-wrong');
 
-playTimers.push(setTimeout(()=>$(‘note-left’).classList.add(‘playing’), t1ms));
-playTimers.push(setTimeout(()=>$(‘note-left’).classList.remove(‘playing’), t1endMs));
+playTimers.push(setTimeout(()=>$('note-left').classList.add('playing'), t1ms));
+playTimers.push(setTimeout(()=>$('note-left').classList.remove('playing'), t1endMs));
 playTimers.push(setTimeout(()=>{
-$(‘note-right’).classList.add(‘playing’);
-// Allow guessing as soon as the second note begins
-if (!roundFailed) awaiting=true;
+  $('note-right').classList.add('playing');
+  if (!roundFailed) awaiting=true;
 }, t2ms));
 playTimers.push(setTimeout(()=>{
-$(‘note-right’).classList.remove(‘playing’);
+  $('note-right').classList.remove('playing');
 }, t2endMs));
 
 playNote(currentRound.note1Midi, now, dur).then(h=>{ playingNode1=h; });
@@ -1279,8 +1278,8 @@ function stopAllSounds() {
 if (playingNode1) { try{ playingNode1.stopAt(audioCtx.currentTime); }catch(e){} playingNode1=null; }
 if (playingNode2) { try{ playingNode2.stopAt(audioCtx.currentTime); }catch(e){} playingNode2=null; }
 clearPlayTimers();
-$(‘note-left’).classList.remove(‘playing’);
-$(‘note-right’).classList.remove(‘playing’);
+$('note-left').classList.remove('playing');
+$('note-right').classList.remove('playing');
 }
 
 function replayBoth() {
@@ -1289,34 +1288,33 @@ stopAllSounds();
 playBothNotes();
 }
 
-// Review: tap a single circle — stops all sounds, then plays that note
 function playOneNote(side) {
 ensureAudio();
 stopAllSounds();
 const dur = noteDur();
 const now = audioCtx.currentTime + 0.02;
-const midiF = (side===‘left’) ? currentRound.note1Midi : currentRound.note2Midi;
+const midiF = (side==='left') ? currentRound.note1Midi : currentRound.note2Midi;
 
-if (side===‘left’) {
-setTimeout(()=>{ $(‘note-left’).classList.add(‘playing’); }, 10);
-setTimeout(()=>{ $(‘note-left’).classList.remove(‘playing’); }, 10+dur*1000);
-playNote(midiF, now, dur).then(h=>{ playingNode1=h; });
+if (side==='left') {
+  setTimeout(()=>{ $('note-left').classList.add('playing'); }, 10);
+  setTimeout(()=>{ $('note-left').classList.remove('playing'); }, 10+dur*1000);
+  playNote(midiF, now, dur).then(h=>{ playingNode1=h; });
 } else {
-setTimeout(()=>{ $(‘note-right’).classList.add(‘playing’); }, 10);
-setTimeout(()=>{ $(‘note-right’).classList.remove(‘playing’); }, 10+dur*1000);
-playNote(midiF, now, dur).then(h=>{ playingNode2=h; });
+  setTimeout(()=>{ $('note-right').classList.add('playing'); }, 10);
+  setTimeout(()=>{ $('note-right').classList.remove('playing'); }, 10+dur*1000);
+  playNote(midiF, now, dur).then(h=>{ playingNode2=h; });
 }
 }
 
 function handleTapArea() {
-if ($(‘start-btn’).style.display === ‘block’) { handleStart(); return; }
+if ($('start-btn').style.display === 'block') { handleStart(); return; }
 replayBoth();
 }
 
 function handleTap(side) {
 if (roundFailed) { playOneNote(side); return; }
 if (!awaiting) return;
-handleAnswer(side===‘right’);
+handleAnswer(side==='right');
 }
 
 function handleAnswer(guessSecondHigher) {
@@ -1328,189 +1326,164 @@ const cents   = CENTS_SEQ[centsIdx];
 
 if (correct) beepCorrect(); else beepWrong();
 
-// Reveal: off note gets ♯/♭ label, reference note gets cleared
-const sym = currentRound.offIsHigher ? ‘♯’ : ‘♭’;
+const sym = currentRound.offIsHigher ? '♯' : '♭';
 const offLabel = `${sym}${fmtC(cents)}`;
 if (currentRound.offIsSecond) {
-$(‘note-left-detail’).textContent  = ‘’;
-$(‘note-right-detail’).textContent = offLabel;
+  $('note-left-detail').textContent  = '';
+  $('note-right-detail').textContent = offLabel;
 } else {
-$(‘note-left-detail’).textContent  = offLabel;
-$(‘note-right-detail’).textContent = ‘’;
+  $('note-left-detail').textContent  = offLabel;
+  $('note-right-detail').textContent = '';
 }
 
-// Flash
-const cls = correct ? ‘flash-correct’ : ‘flash-wrong’;
-$(‘note-left’).classList.add(cls);
-$(‘note-right’).classList.add(cls);
+const cls = correct ? 'flash-correct' : 'flash-wrong';
+$('note-left').classList.add(cls);
+$('note-right').classList.add(cls);
 
 roundAttempts++;
-roundResults.push(correct?‘correct’:‘wrong’);
+roundResults.push(correct?'correct':'wrong');
 renderProgress();
 
 if (correct) {
-$(‘status-msg’).textContent=‘Correct’; $(‘status-msg’).style.color=’#a0f0a0’;
+  $('status-msg').textContent='Correct'; $('status-msg').style.color='#a0f0a0';
 } else {
-const higherNote = currentRound.secondIsHigher ? ‘The second note was higher.’ : ‘The first note was higher.’;
-$(‘status-msg’).textContent=`Wrong. ${higherNote}`; $(‘status-msg’).style.color=’#f09090’;
+  const higherNote = currentRound.secondIsHigher ? 'The second note was higher.' : 'The first note was higher.';
+  $('status-msg').textContent=`Wrong. ${higherNote}`; $('status-msg').style.color='#f09090';
 }
 
 if (!correct) {
-roundFailed=true;
-const key = currentNote.name;
-if (!stats[key]) stats[key]={};
-stats[key].lastFailureCents = cents;
-saveStats();
-logEvent(`roundFail | note=${key} | cents=${fmtC(cents)} | retest=${retestNote||'none'}`);
+  roundFailed=true;
+  const key = currentNote.name;
+  if (!stats[key]) stats[key]={};
+  stats[key].lastFailureCents = cents;
+  saveStats();
+  logEvent(`roundFail | note=${key} | cents=${fmtC(cents)} | retest=${retestNote||'none'}`);
 
-```
-if (retestNote) {
-  if (firstRoundOfRetest) {
-    // First round failed: step easier and try again
-    firstRoundOfRetest = false;
+  if (retestNote) {
+    if (firstRoundOfRetest) {
+      firstRoundOfRetest = false;
+      pendingCentsStep = -1;
+    } else if (atLeastOneSuccessfulRetest) {
+      retestEnding = true;
+      const bestCents = stats[key]?.bestCents;
+      const bestStr   = bestCents != null ? fmtC(bestCents) : '—';
+      $('status-msg').textContent = `New best for ${dn(key)}: ${bestStr}`;
+      $('status-msg').style.color = '#a0f0a0';
+      setTimeout(()=>{ showRetestEndActions(); }, 1400);
+      return;
+    } else {
+      pendingCentsStep = -1;
+    }
+  } else {
     pendingCentsStep = -1;
-  } else if (atLeastOneSuccessfulRetest) {
-    // Had at least one success, now failed: retest is over — show Back button
-    retestEnding = true;
-    const bestCents = stats[key]?.bestCents;
-    const bestStr   = bestCents != null ? fmtC(bestCents) : '—';
-    $('status-msg').textContent = `New best for ${dn(key)}: ${bestStr}`;
-    $('status-msg').style.color = '#a0f0a0';
-    setTimeout(()=>{ showRetestEndActions(); }, 1400);
-    return;
-  } else {
-    // No successes yet — step easier and keep going
-    pendingCentsStep = -1;
   }
-} else {
-  // Normal mode — step easier (deferred)
-  pendingCentsStep = -1;
-}
-setTimeout(()=>{
-  $('retry-action-btn').style.display = retestNote ? '' : 'none';
-  $('round-actions').style.display='flex';
-  $('swipe-hint').textContent='Tap a note to play it.';
-}, 1400);
-return;
-```
-
-}
-
-// 3 correct in a row — success!
-if (roundResults.length===settings.testsPerRound && roundResults.every(x=>x===‘correct’)) {
-logEvent(`roundSuccess | note=${currentNote.name} | cents=${fmtC(cents)} | retest=${retestNote||'none'}`);
-stopAllSounds();
-setTimeout(chimeSuccess, 150); // brief gap so note cutoff doesn’t clash with bell attack
-const key = currentNote.name;
-if (!stats[key]) stats[key]={};
-if (stats[key].bestCents==null || cents < stats[key].bestCents) {
-stats[key].bestCents = cents;
-}
-// Clear lastFailureCents if we succeeded at a level equal to or easier than the last failure
-if (stats[key].lastFailureCents != null && cents >= stats[key].lastFailureCents) {
-delete stats[key].lastFailureCents;
-}
-saveStats();
-
-```
-if (retestNote) {
-  firstRoundOfRetest = false;
-  atLeastOneSuccessfulRetest = true;
-  // Keep going harder with same note
-  if (centsIdx < CENTS_SEQ.length-1) {
-    centsIdx++;
-    const newDiff = fmtC(CENTS_SEQ[centsIdx]);
-    $('status-msg').textContent=`Good job! Going harder… Trying ${newDiff}, next!`;
-    setTimeout(()=>{ $('diff-value').textContent = newDiff; clearProgress(); startRound(); }, 3200);
-  } else {
-    $('status-msg').textContent='Master level!';
-    setTimeout(()=>{ clearProgress(); exitRetest(); }, 3200);
-  }
-} else {
-  if (centsIdx < CENTS_SEQ.length-1) {
-    centsIdx++;
-    const newDiff = fmtC(CENTS_SEQ[centsIdx]);
-    $('status-msg').textContent=`Good job! Trying ${newDiff}, next!`;
-  } else {
-    $('status-msg').textContent='Master level!';
-  }
-  // Update diff label and start new round after delay
   setTimeout(()=>{
-    $('diff-value').textContent = fmtC(CENTS_SEQ[centsIdx]);
-    clearProgress(); roundResults=[]; roundAttempts=0; setupAttempt();
-  }, 3200);
-}
-return;
-```
-
+    $('retry-action-btn').style.display = retestNote ? '' : 'none';
+    $('round-actions').style.display='flex';
+    $('swipe-hint').textContent='Tap a note to play it.';
+  }, 1400);
+  return;
 }
 
-// Correct, but round not done yet — next attempt
+if (roundResults.length===settings.testsPerRound && roundResults.every(x=>x==='correct')) {
+  logEvent(`roundSuccess | note=${currentNote.name} | cents=${fmtC(cents)} | retest=${retestNote||'none'}`);
+  stopAllSounds();
+  setTimeout(chimeSuccess, 150);
+  const key = currentNote.name;
+  if (!stats[key]) stats[key]={};
+  if (stats[key].bestCents==null || cents < stats[key].bestCents) {
+    stats[key].bestCents = cents;
+  }
+  if (stats[key].lastFailureCents != null && cents >= stats[key].lastFailureCents) {
+    delete stats[key].lastFailureCents;
+  }
+  saveStats();
+
+  if (retestNote) {
+    firstRoundOfRetest = false;
+    atLeastOneSuccessfulRetest = true;
+    if (centsIdx < CENTS_SEQ.length-1) {
+      centsIdx++;
+      const newDiff = fmtC(CENTS_SEQ[centsIdx]);
+      $('status-msg').textContent=`Good job! Going harder… Trying ${newDiff}, next!`;
+      setTimeout(()=>{ $('diff-value').textContent = newDiff; clearProgress(); startRound(); }, 3200);
+    } else {
+      $('status-msg').textContent='Master level!';
+      setTimeout(()=>{ clearProgress(); exitRetest(); }, 3200);
+    }
+  } else {
+    if (centsIdx < CENTS_SEQ.length-1) {
+      centsIdx++;
+      const newDiff = fmtC(CENTS_SEQ[centsIdx]);
+      $('status-msg').textContent=`Good job! Trying ${newDiff}, next!`;
+    } else {
+      $('status-msg').textContent='Master level!';
+    }
+    setTimeout(()=>{
+      $('diff-value').textContent = fmtC(CENTS_SEQ[centsIdx]);
+      clearProgress(); roundResults=[]; roundAttempts=0; setupAttempt();
+    }, 3200);
+  }
+  return;
+}
+
 setTimeout(()=>{
-awaiting=false;
-$(‘note-left’).className=‘note-circle’; $(‘note-right’).className=‘note-circle’;
-$(‘status-msg’).textContent=’’;
-setupAttempt(); // re-randomizes sharp/flat
+  awaiting=false;
+  $('note-left').className='note-circle'; $('note-right').className='note-circle';
+  $('status-msg').textContent='';
+  setupAttempt();
 }, 1600);
 }
 
 // ══════════════════════════════════════════════════════
 // FAILED ROUND STATE
 // ══════════════════════════════════════════════════════
-// When roundFailed=true: note buttons replay individual notes,
-// replay button replays both, swipe does nothing.
-
 function continueAfterFail() {
 roundFailed=false;
-$(‘round-actions’).style.display=‘none’; hideRetestEndActions();
-$(‘status-msg’).textContent=’’;
-$(‘swipe-hint’).textContent=‘Tap the higher note, or swipe up/down to indicate that the 2nd note is higher/lower.’;
+$('round-actions').style.display='none'; hideRetestEndActions();
+$('status-msg').textContent='';
+$('swipe-hint').textContent='Tap the higher note, or swipe up/down to indicate that the 2nd note is higher/lower.';
 clearProgress();
-// Apply the deferred difficulty step now that user has seen the result
 if (pendingCentsStep !== 0) {
-centsIdx = Math.max(0, Math.min(CENTS_SEQ.length-1, centsIdx + pendingCentsStep));
-pendingCentsStep = 0;
+  centsIdx = Math.max(0, Math.min(CENTS_SEQ.length-1, centsIdx + pendingCentsStep));
+  pendingCentsStep = 0;
 }
 if (retestEnding) {
-retestEnding = false;
-exitRetest(true); // silent — don’t start a round yet
-// Open info page and scroll to scores table
-setTimeout(() => {
-openInfo();
-setTimeout(() => {
-const scoresEl = document.getElementById(‘stats-table’);
-if (scoresEl) scoresEl.scrollIntoView({ behavior: ‘smooth’, block: ‘start’ });
-}, 150);
-}, 200);
+  retestEnding = false;
+  exitRetest(true);
+  setTimeout(() => {
+    openInfo();
+    setTimeout(() => {
+      const scoresEl = document.getElementById('stats-table');
+      if (scoresEl) scoresEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }, 150);
+  }, 200);
 } else if (retestNote) {
-setTimeout(startRound, 200);
+  setTimeout(startRound, 200);
 } else {
-// Stay on same note if no bestScore yet; otherwise pick a new note
-const hasBest = currentNote && stats[currentNote.name]?.bestCents != null;
-if (hasBest) {
-setTimeout(startRound, 200);
-} else {
-// Reset round state before re-attempting same note
-roundAttempts = 0;
-roundResults = [];
-clearProgress();
-setTimeout(setupAttempt, 200);
-}
+  const hasBest = currentNote && stats[currentNote.name]?.bestCents != null;
+  if (hasBest) {
+    setTimeout(startRound, 200);
+  } else {
+    roundAttempts = 0;
+    roundResults = [];
+    clearProgress();
+    setTimeout(setupAttempt, 200);
+  }
 }
 }
 
 function showRetestEndActions() {
-// Show Retry + Back; hide Continue only
-$(‘continue-action-btn’).style.display = ‘none’;
-$(‘back-action-btn’).style.display = ‘’;
-$(‘round-actions’).style.display = ‘flex’;
-$(‘swipe-hint’).textContent = ‘Tap a note to play it.’;
+$('continue-action-btn').style.display = 'none';
+$('back-action-btn').style.display = '';
+$('round-actions').style.display = 'flex';
+$('swipe-hint').textContent = 'Tap a note to play it.';
 }
 
 function hideRetestEndActions() {
-$(‘retry-action-btn’).style.display = retestNote ? ‘’ : ‘none’;
-$(‘continue-action-btn’).style.display = ‘’;
-$(‘back-action-btn’).style.display = ‘none’;
+$('retry-action-btn').style.display = retestNote ? '' : 'none';
+$('continue-action-btn').style.display = '';
+$('back-action-btn').style.display = 'none';
 }
 
 function retryRound() {
@@ -1518,18 +1491,17 @@ roundFailed = false;
 retestEnding = false;
 roundResults = [];
 roundAttempts = 0;
-$(‘round-actions’).style.display = ‘none’; hideRetestEndActions();
-$(‘status-msg’).textContent = ‘’;
-$(‘swipe-hint’).textContent = ‘Tap the higher note, or swipe up/down to indicate that the 2nd note is higher/lower.’;
+$('round-actions').style.display = 'none'; hideRetestEndActions();
+$('status-msg').textContent = '';
+$('swipe-hint').textContent = 'Tap the higher note, or swipe up/down to indicate that the 2nd note is higher/lower.';
 clearProgress();
 pendingCentsStep = 0;
-// Reset retest state and restart from bestCents for this note
 firstRoundOfRetest = true;
 atLeastOneSuccessfulRetest = false;
 const bestCents = stats[currentNote?.name]?.bestCents;
 if (bestCents != null) {
-let idx = CENTS_SEQ.findIndex(c => c <= bestCents);
-centsIdx = idx >= 0 ? idx : CENTS_SEQ.length - 1;
+  let idx = CENTS_SEQ.findIndex(c => c <= bestCents);
+  centsIdx = idx >= 0 ? idx : CENTS_SEQ.length - 1;
 }
 setTimeout(setupAttempt, 200);
 }
@@ -1538,27 +1510,26 @@ setTimeout(setupAttempt, 200);
 // PROGRESS INDICATORS
 // ══════════════════════════════════════════════════════
 function clearProgress() {
-const row = $(‘progress-row’);
-row.innerHTML = ‘’;
+const row = $('progress-row');
+row.innerHTML = '';
 for (let i = 0; i < settings.testsPerRound; i++) {
-const slot = document.createElement(‘div’);
-slot.className = ‘prog-slot’;
-slot.id = ‘prog’ + i;
-// Grey placeholder circle — same size as check/cross SVGs
-slot.innerHTML = `<svg width="28" height="28" viewBox="0 0 28 28" fill="none"> <circle cx="14" cy="14" r="12" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.20)" stroke-width="1.5"/> </svg>`;
-row.appendChild(slot);
+  const slot = document.createElement('div');
+  slot.className = 'prog-slot';
+  slot.id = 'prog' + i;
+  slot.innerHTML = `<svg width="28" height="28" viewBox="0 0 28 28" fill="none"> <circle cx="14" cy="14" r="12" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.20)" stroke-width="1.5"/> </svg>`;
+  row.appendChild(slot);
 }
 }
 
 function renderProgress() {
 const i = roundResults.length - 1;
 if (i < 0 || i >= settings.testsPerRound) return;
-const slot = $(‘prog’ + i);
+const slot = $('prog' + i);
 if (!slot) return;
-if (roundResults[i]===‘correct’) {
-slot.innerHTML=`<svg class="prog-check" width="28" height="28" viewBox="0 0 28 28" fill="none"> <circle cx="14" cy="14" r="12" fill="rgba(60,200,80,0.25)" stroke="rgba(80,220,100,0.70)" stroke-width="1.5"/> <path d="M8 14 L12 18 L20 10" stroke="#6fe882" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/> </svg>`;
+if (roundResults[i]==='correct') {
+  slot.innerHTML=`<svg class="prog-check" width="28" height="28" viewBox="0 0 28 28" fill="none"> <circle cx="14" cy="14" r="12" fill="rgba(60,200,80,0.25)" stroke="rgba(80,220,100,0.70)" stroke-width="1.5"/> <path d="M8 14 L12 18 L20 10" stroke="#6fe882" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/> </svg>`;
 } else {
-slot.innerHTML=`<svg class="prog-cross" width="28" height="28" viewBox="0 0 28 28" fill="none"> <circle cx="14" cy="14" r="12" fill="rgba(210,50,40,0.25)" stroke="rgba(230,80,70,0.70)" stroke-width="1.5"/> <path d="M9 9 L19 19M19 9 L9 19" stroke="#f07070" stroke-width="2.5" stroke-linecap="round"/> </svg>`;
+  slot.innerHTML=`<svg class="prog-cross" width="28" height="28" viewBox="0 0 28 28" fill="none"> <circle cx="14" cy="14" r="12" fill="rgba(210,50,40,0.25)" stroke="rgba(230,80,70,0.70)" stroke-width="1.5"/> <path d="M9 9 L19 19M19 9 L9 19" stroke="#f07070" stroke-width="2.5" stroke-linecap="round"/> </svg>`;
 }
 }
 
@@ -1566,31 +1537,28 @@ slot.innerHTML=`<svg class="prog-cross" width="28" height="28" viewBox="0 0 28 2
 // SWIPE + SHAKE
 // ══════════════════════════════════════════════════════
 let touchStartY=0, touchStartX=0;
-document.getElementById(‘app’).addEventListener(‘touchstart’, e=>{
+document.getElementById('app').addEventListener('touchstart', e=>{
 touchStartY=e.touches[0].clientY; touchStartX=e.touches[0].clientX;
 }, {passive:true});
-document.getElementById(‘app’).addEventListener(‘touchend’, e=>{
+document.getElementById('app').addEventListener('touchend', e=>{
 const dy=touchStartY-e.changedTouches[0].clientY;
 const dx=touchStartX-e.changedTouches[0].clientX;
 const absDx=Math.abs(dx), absDy=Math.abs(dy);
 
 if (absDx > 45 && absDx > absDy) {
-if (dx < 0 && roundFailed) {
-// Swipe right → Continue/Back
-const actionsVisible = $(‘round-actions’).style.display === ‘flex’;
-const continueVisible = actionsVisible && $(‘continue-action-btn’).style.display !== ‘none’;
-const backVisible = actionsVisible && $(‘back-action-btn’).style.display !== ‘none’;
-if (continueVisible || backVisible) { continueAfterFail(); return; }
-}
-if (dx > 0 && roundFailed && retestNote) {
-// Swipe left → Retry (retest only, when Retry button is visible)
-const retryVisible = $(‘retry-action-btn’).style.display !== ‘none’ &&
-$(‘round-actions’).style.display === ‘flex’;
-if (retryVisible) { retryRound(); return; }
-}
+  if (dx < 0 && roundFailed) {
+    const actionsVisible = $('round-actions').style.display === 'flex';
+    const continueVisible = actionsVisible && $('continue-action-btn').style.display !== 'none';
+    const backVisible = actionsVisible && $('back-action-btn').style.display !== 'none';
+    if (continueVisible || backVisible) { continueAfterFail(); return; }
+  }
+  if (dx > 0 && roundFailed && retestNote) {
+    const retryVisible = $('retry-action-btn').style.display !== 'none' &&
+      $('round-actions').style.display === 'flex';
+    if (retryVisible) { retryRound(); return; }
+  }
 }
 
-// Swipe up/down for answer during listening
 if (roundFailed||!awaiting) return;
 if (absDy<45||absDx>absDy) return;
 handleAnswer(dy>0);
@@ -1601,68 +1569,64 @@ let shakeListenerActive = false;
 function setupShake() {
 if (shakeListenerActive) return;
 shakeListenerActive = true;
-window.addEventListener(‘devicemotion’, e=>{
-if (!settings.shakeToReplay) return;
-const a=e.accelerationIncludingGravity; if(!a) return;
-const mag=Math.sqrt(a.x*a.x+a.y*a.y+a.z*a.z);
-const now=Date.now();
-if (mag>15 && now-lastShakeT>800) {
-lastShakeT=now;
-if (roundFailed) replayBoth();
-else replayBoth();
-}
+window.addEventListener('devicemotion', e=>{
+  if (!settings.shakeToReplay) return;
+  const a=e.accelerationIncludingGravity; if(!a) return;
+  const mag=Math.sqrt(a.x*a.x+a.y*a.y+a.z*a.z);
+  const now=Date.now();
+  if (mag>15 && now-lastShakeT>800) {
+    lastShakeT=now;
+    replayBoth();
+  }
 }, {passive:true});
 }
 
 function renderShakeBtn() {
-const chk = $(‘s-shake-chk’);
+const chk = $('s-shake-chk');
 if (chk) chk.checked = !!settings.shakeToReplay;
 }
 
 function onShakeToggle(checked) {
 if (checked) {
-if (typeof DeviceMotionEvent !== ‘undefined’ && typeof DeviceMotionEvent.requestPermission === ‘function’) {
-DeviceMotionEvent.requestPermission().then(r => {
-if (r === ‘granted’) {
-settings.shakeToReplay = true;
-saveSettings();
-setupShake();
+  if (typeof DeviceMotionEvent !== 'undefined' && typeof DeviceMotionEvent.requestPermission === 'function') {
+    DeviceMotionEvent.requestPermission().then(r => {
+      if (r === 'granted') {
+        settings.shakeToReplay = true;
+        saveSettings();
+        setupShake();
+      } else {
+        settings.shakeToReplay = false;
+        saveSettings();
+        renderShakeBtn();
+      }
+    }).catch(()=>{ settings.shakeToReplay=false; saveSettings(); renderShakeBtn(); });
+  } else {
+    settings.shakeToReplay = true;
+    saveSettings();
+    setupShake();
+  }
 } else {
-settings.shakeToReplay = false;
-saveSettings();
-renderShakeBtn();
-}
-}).catch(()=>{ settings.shakeToReplay=false; saveSettings(); renderShakeBtn(); });
-} else {
-settings.shakeToReplay = true;
-saveSettings();
-setupShake();
-}
-} else {
-settings.shakeToReplay = false;
-saveSettings();
+  settings.shakeToReplay = false;
+  saveSettings();
 }
 }
 
-function openResetDefaults() { $(‘reset-overlay’).classList.add(‘open’); }
-function closeResetDefaults() { $(‘reset-overlay’).classList.remove(‘open’); }
+function openResetDefaults() { $('reset-overlay').classList.add('open'); }
+function closeResetDefaults() { $('reset-overlay').classList.remove('open'); }
 function confirmResetDefaults() {
-$(‘reset-overlay’).classList.remove(‘open’);
+$('reset-overlay').classList.remove('open');
 settings = { lowestNote:22, highestNote:53, startCentsIdx:5, noteDurIdx:3, attack:1, decay:1, soundIdx:0, testsPerRound:3, shakeToReplay:false };
 saveSettings();
 centsIdx = settings.startCentsIdx;
 renderSettings();
-// Don’t close settings — let user see the updated values and close manually
 }
 
-// If shake was previously enabled and permission doesn’t need requesting, restore it
 if (settings.shakeToReplay) {
-if (typeof DeviceMotionEvent !== ‘undefined’ && typeof DeviceMotionEvent.requestPermission === ‘function’) {
-// iOS requires a fresh permission request each session — reset to off
-settings.shakeToReplay = false;
-saveSettings();
+if (typeof DeviceMotionEvent !== 'undefined' && typeof DeviceMotionEvent.requestPermission === 'function') {
+  settings.shakeToReplay = false;
+  saveSettings();
 } else {
-setupShake();
+  setupShake();
 }
 }
 
@@ -1671,13 +1635,13 @@ setupShake();
 // ══════════════════════════════════════════════════════
 let previewTimer=null;
 function adjustSetting(key,dir) {
-if      (key===‘lowestNote’)    settings.lowestNote    = Math.max(0, Math.min(settings.highestNote-1, settings.lowestNote+dir));
-else if (key===‘highestNote’)   settings.highestNote   = Math.max(settings.lowestNote+1, Math.min(ALL_NOTES.length-1, settings.highestNote+dir));
-else if (key===‘startCentsIdx’) settings.startCentsIdx = Math.max(0, Math.min(CENTS_SEQ.length-1, settings.startCentsIdx+dir));
-else if (key===‘testsPerRound’) settings.testsPerRound = Math.max(1, Math.min(7, settings.testsPerRound+dir));
-else if (key===‘noteDurIdx’)    settings.noteDurIdx    = Math.max(0, Math.min(DUR_STEPS.length-1, settings.noteDurIdx+dir));
-else if (key===‘attack’) { settings.attack=Math.max(0,Math.min(ATK_PRESETS.length-1,settings.attack+dir)); schedulePreview(); }
-else if (key===‘decay’)  { settings.decay =Math.max(0,Math.min(DEC_PRESETS.length-1,settings.decay+dir));  schedulePreview(); }
+if      (key==='lowestNote')    settings.lowestNote    = Math.max(0, Math.min(settings.highestNote-1, settings.lowestNote+dir));
+else if (key==='highestNote')   settings.highestNote   = Math.max(settings.lowestNote+1, Math.min(ALL_NOTES.length-1, settings.highestNote+dir));
+else if (key==='startCentsIdx') settings.startCentsIdx = Math.max(0, Math.min(CENTS_SEQ.length-1, settings.startCentsIdx+dir));
+else if (key==='testsPerRound') settings.testsPerRound = Math.max(1, Math.min(7, settings.testsPerRound+dir));
+else if (key==='noteDurIdx')    settings.noteDurIdx    = Math.max(0, Math.min(DUR_STEPS.length-1, settings.noteDurIdx+dir));
+else if (key==='attack') { settings.attack=Math.max(0,Math.min(ATK_PRESETS.length-1,settings.attack+dir)); schedulePreview(); }
+else if (key==='decay')  { settings.decay =Math.max(0,Math.min(DEC_PRESETS.length-1,settings.decay+dir));  schedulePreview(); }
 saveSettings(); renderSettings();
 }
 
@@ -1687,27 +1651,27 @@ previewTimer=setTimeout(()=>{ ensureAudio(); const dur=noteDur(); playNote(69, a
 }
 
 function renderSettings() {
-$(‘s-lowest’).textContent      = dn(ALL_NOTES[settings.lowestNote].name);
-$(‘s-highest’).textContent     = dn(ALL_NOTES[settings.highestNote].name);
-$(‘s-start-cents’).textContent = fmtC(CENTS_SEQ[settings.startCentsIdx]);
-$(‘s-tests-per-round’).textContent = settings.testsPerRound;
-$(‘s-note-dur’).textContent    = DUR_STEPS[settings.noteDurIdx].toFixed(1)+‘s’;
-$(‘s-attack’).textContent      = ATK_PRESETS[settings.attack][0];
-$(‘s-decay’).textContent       = DEC_PRESETS[settings.decay][0];
+$('s-lowest').textContent      = dn(ALL_NOTES[settings.lowestNote].name);
+$('s-highest').textContent     = dn(ALL_NOTES[settings.highestNote].name);
+$('s-start-cents').textContent = fmtC(CENTS_SEQ[settings.startCentsIdx]);
+$('s-tests-per-round').textContent = settings.testsPerRound;
+$('s-note-dur').textContent    = DUR_STEPS[settings.noteDurIdx].toFixed(1)+'s';
+$('s-attack').textContent      = ATK_PRESETS[settings.attack][0];
+$('s-decay').textContent       = DEC_PRESETS[settings.decay][0];
 renderSoundGrid();
 renderShakeBtn();
 updateLogUI();
 }
 
 function renderSoundGrid() {
-const grid=$(‘sound-grid’); grid.innerHTML=’’;
+const grid=$('sound-grid'); grid.innerHTML='';
 SOUNDS.forEach((s,idx)=>{
-const btn=document.createElement(‘button’);
-btn.className=‘sound-btn’+(idx===settings.soundIdx?’ active’:’’);
-btn.textContent=s.label;
-if (s.type===‘sf’&&!sfInstruments[s.sfName]) btn.classList.add(‘loading’);
-btn.onclick=()=>selectSound(idx);
-grid.appendChild(btn);
+  const btn=document.createElement('button');
+  btn.className='sound-btn'+(idx===settings.soundIdx?' active':'');
+  btn.textContent=s.label;
+  if (s.type==='sf'&&!sfInstruments[s.sfName]) btn.classList.add('loading');
+  btn.onclick=()=>selectSound(idx);
+  grid.appendChild(btn);
 });
 }
 
@@ -1715,38 +1679,37 @@ async function selectSound(idx) {
 settings.soundIdx=idx; saveSettings(); renderSoundGrid();
 ensureAudio();
 const sound=SOUNDS[idx];
-if (sound.type===‘sf’&&!sfInstruments[sound.sfName]) {
-try { await loadSfInstrument(sound.sfName); } catch(e){ console.warn(‘SF load failed:’,e); }
-renderSoundGrid();
+if (sound.type==='sf'&&!sfInstruments[sound.sfName]) {
+  try { await loadSfInstrument(sound.sfName); } catch(e){ console.warn('SF load failed:',e); }
+  renderSoundGrid();
 }
 const dur=noteDur();
-playNote(69, audioCtx.currentTime+0.06, dur); // A4 preview
+playNote(69, audioCtx.currentTime+0.06, dur);
 }
 
-let settingsOpenTestsPerRound = 3; // snapshot of testsPerRound when settings opened
+let settingsOpenTestsPerRound = 3;
 
 function openSettings() {
 ensureAudio();
 settingsOpenTestsPerRound = settings.testsPerRound;
 const s=SOUNDS[settings.soundIdx];
-if (s.type===‘sf’&&!sfInstruments[s.sfName]) loadSfInstrument(s.sfName).then(()=>renderSoundGrid()).catch(()=>{});
+if (s.type==='sf'&&!sfInstruments[s.sfName]) loadSfInstrument(s.sfName).then(()=>renderSoundGrid()).catch(()=>{});
 renderSettings();
-setBg(’#1a1a1a’);
-$(‘settings-overlay’).classList.add(‘open’);
+setBg('#1a1a1a');
+$('settings-overlay').classList.add('open');
 }
 function closeSettings() {
-$(‘settings-overlay’).classList.remove(‘open’);
-setBg(retestNote ? ‘#0d2a1a’ : ‘#4d1903’);
-// If tests-per-round changed during an active round, restart cleanly
+$('settings-overlay').classList.remove('open');
+setBg(retestNote ? '#0d2a1a' : '#4d1903');
 if (settings.testsPerRound !== settingsOpenTestsPerRound) {
-clearProgress();          // rebuilds slots with new count
-roundResults = [];
-roundAttempts = 0;
-roundFailed = false;
-awaiting = false;
-$(‘round-actions’).style.display = ‘none’; hideRetestEndActions();
-$(‘status-msg’).textContent = ‘’;
-setTimeout(setupAttempt, 300); // fresh attempt on same note at same difficulty
+  clearProgress();
+  roundResults = [];
+  roundAttempts = 0;
+  roundFailed = false;
+  awaiting = false;
+  $('round-actions').style.display = 'none'; hideRetestEndActions();
+  $('status-msg').textContent = '';
+  setTimeout(setupAttempt, 300);
 }
 }
 
@@ -1754,39 +1717,37 @@ setTimeout(setupAttempt, 300); // fresh attempt on same note at same difficulty
 // INFO / STATS
 // ══════════════════════════════════════════════════════
 function toggleInfoMore() {
-const content = $(‘info-more-content’);
-const btn = $(‘info-more-btn’);
-const isOpen = content.classList.toggle(‘open’);
-btn.innerHTML = isOpen ? ‘▲ <span>Show less</span>’ : ‘… more’;
+const content = $('info-more-content');
+const btn = $('info-more-btn');
+const isOpen = content.classList.toggle('open');
+btn.innerHTML = isOpen ? '▲ <span>Show less</span>' : '… more';
 }
 
 function openInfo() {
-setBg(’#f5efe6’);
-$(‘info-overlay’).classList.add(‘open’);
-$(‘app’).style.visibility = ‘hidden’;
-$(‘swipe-hint’).style.visibility = ‘hidden’;
-// Reset collapsed state
-$(‘info-more-content’).classList.remove(‘open’);
-$(‘info-more-btn’).innerHTML = ‘… more’;
+setBg('#f5efe6');
+$('info-overlay').classList.add('open');
+$('app').style.visibility = 'hidden';
+$('swipe-hint').style.visibility = 'hidden';
+$('info-more-content').classList.remove('open');
+$('info-more-btn').innerHTML = '… more';
 setTimeout(() => requestAnimationFrame(() => {
-renderStats();
-// Trigger chart canvas resize after layout is complete
-const wrap = $(‘stats-chart-wrap’);
-const canvas = $(‘stats-chart’);
-if (wrap && canvas) {
-canvas.style.width = wrap.offsetWidth + ‘px’;
-}
+  renderStats();
+  const wrap = $('stats-chart-wrap');
+  const canvas = $('stats-chart');
+  if (wrap && canvas) {
+    canvas.style.width = wrap.offsetWidth + 'px';
+  }
 }), 80);
 }
 function closeInfo() {
-$(‘info-overlay’).classList.remove(‘open’);
-$(‘app’).style.visibility = ‘’;
-$(‘swipe-hint’).style.visibility = ‘’;
-$(‘phase-label’).textContent = ‘Listen’;
-setBg(retestNote ? ‘#0d2a1a’ : ‘#4d1903’);
+$('info-overlay').classList.remove('open');
+$('app').style.visibility = '';
+$('swipe-hint').style.visibility = '';
+$('phase-label').textContent = 'Listen';
+setBg(retestNote ? '#0d2a1a' : '#4d1903');
 if (!awaiting && !roundFailed && !retestNote &&
-$(‘start-btn’).style.display !== ‘block’) {
-setTimeout(startRound, 200);
+  $('start-btn').style.display !== 'block') {
+  setTimeout(startRound, 200);
 }
 }
 
@@ -1797,187 +1758,156 @@ return isRegressed(noteName) ? base * 1.25 : base;
 }
 
 function renderStats() {
-const tbody=$(‘stats-tbody’); tbody.innerHTML=’’;
+const tbody=$('stats-tbody'); tbody.innerHTML='';
 
-// Build a lookup from note name → {midi, hz} for all notes in the full array
 const noteInfo = {};
 ALL_NOTES.forEach(n => { noteInfo[n.name] = { midi: n.midi, hz: midiToHz(n.midi) }; });
 
-// Determine the frequency range from the current settings (using MIDI as ground truth)
 const lowestHz  = midiToHz(ALL_NOTES[settings.lowestNote].midi);
 const highestHz = midiToHz(ALL_NOTES[settings.highestNote].midi);
 
-// Find all stat keys that fall within the current frequency range and have data
 const inRangeWithData = Object.keys(stats).filter(name => {
-const info = noteInfo[name];
-if (!info) return false; // unknown note name — skip
-if (info.hz < lowestHz - 0.01 || info.hz > highestHz + 0.01) return false; // outside range
-const st = stats[name];
-return st && (st.bestCents != null || st.lastFailureCents != null || st.attempts);
+  const info = noteInfo[name];
+  if (!info) return false;
+  if (info.hz < lowestHz - 0.01 || info.hz > highestHz + 0.01) return false;
+  const st = stats[name];
+  return st && (st.bestCents != null || st.lastFailureCents != null || st.attempts);
 });
 
-// Sort by frequency (ascending = lower pitch first)
 const sorted = inRangeWithData
-.map(name => ({ name, hz: noteInfo[name].hz, midi: noteInfo[name].midi }))
-.sort((a, b) => a.hz - b.hz);
+  .map(name => ({ name, hz: noteInfo[name].hz, midi: noteInfo[name].midi }))
+  .sort((a, b) => a.hz - b.hz);
 
-// Compute probabilities over the current pool (lowestNote..highestNote)
 const pool = ALL_NOTES.slice(settings.lowestNote, settings.highestNote+1);
 const untested = pool.filter(n => !stats[n.name] || stats[n.name].attempts == null || stats[n.name].attempts === 0);
 const allTested = untested.length === 0;
 let totalWeight = 0;
 if (allTested) {
-totalWeight = pool.reduce((s, n) => s + noteWeight(n.name), 0);
+  totalWeight = pool.reduce((s, n) => s + noteWeight(n.name), 0);
 }
 
-function probFor(noteName) {
-if (!pool.find(n => n.name === noteName)) return null; // outside range
-if (!allTested) {
-// Untested notes share equal probability among untested pool
-const isUntested = !stats[noteName] || stats[noteName].attempts == null || stats[noteName].attempts === 0;
-return isUntested ? (100 / untested.length) : 0;
-}
-return totalWeight > 0 ? (noteWeight(noteName) / totalWeight) * 100 : 0;
-}
-
-// Overall score: average bestCents across in-range notes with data
 const allWithBest = ALL_NOTES.filter(n => {
-const hz = midiToHz(n.midi);
-return hz >= lowestHz - 0.01 && hz <= highestHz + 0.01 && stats[n.name]?.bestCents != null;
+  const hz = midiToHz(n.midi);
+  return hz >= lowestHz - 0.01 && hz <= highestHz + 0.01 && stats[n.name]?.bestCents != null;
 });
 if (allWithBest.length > 0) {
-const avg = allWithBest.reduce((s, n) => s + stats[n.name].bestCents, 0) / allWithBest.length;
-$(‘overall-score’).textContent = avg.toFixed(1) + ‘¢’;
+  const avg = allWithBest.reduce((s, n) => s + stats[n.name].bestCents, 0) / allWithBest.length;
+  $('overall-score').textContent = avg.toFixed(1) + '¢';
 } else {
-$(‘overall-score’).textContent = ‘—’;
+  $('overall-score').textContent = '—';
 }
 
 if (!sorted.length) {
-tbody.innerHTML=’<tr><td colspan="4" style="opacity:.45;font-style:italic;padding:10px 8px">No data yet</td></tr>’;
+  tbody.innerHTML='<tr><td colspan="4" style="opacity:.45;font-style:italic;padding:10px 8px">No data yet</td></tr>';
 } else {
-sorted.forEach(note=>{
-const st=stats[note.name];
-const best    = (st?.bestCents!=null)       ? fmtC(st.bestCents)        : ‘—’;
-const failed  = (st?.lastFailureCents!=null) ? fmtC(st.lastFailureCents) : ‘—’;
-const regressed = isRegressed(note.name);
-const noBest = st?.lastFailureCents != null && st?.bestCents == null;
-const tr=document.createElement(‘tr’);
-if (regressed) tr.classList.add(‘stat-row-regressed’);
-else if (noBest) tr.classList.add(‘stat-row-no-best’);
-tr.innerHTML=`<td class="stat-note-name">${dn(note.name)}</td> <td class="stat-best">${best}</td> <td class="stat-failed">${failed}</td> <td><button class="stat-btn stat-retest-btn" onclick="startNoteTest('${note.name}')">Retest</button></td>`;
-tbody.appendChild(tr);
-});
+  sorted.forEach(note=>{
+    const st=stats[note.name];
+    const best    = (st?.bestCents!=null)       ? fmtC(st.bestCents)        : '—';
+    const failed  = (st?.lastFailureCents!=null) ? fmtC(st.lastFailureCents) : '—';
+    const regressed = isRegressed(note.name);
+    const noBest = st?.lastFailureCents != null && st?.bestCents == null;
+    const tr=document.createElement('tr');
+    if (regressed) tr.classList.add('stat-row-regressed');
+    else if (noBest) tr.classList.add('stat-row-no-best');
+    tr.innerHTML=`<td class="stat-note-name">${dn(note.name)}</td> <td class="stat-best">${best}</td> <td class="stat-failed">${failed}</td> <td><button class="stat-btn stat-retest-btn" onclick="startNoteTest('${note.name}')">Retest</button></td>`;
+    tbody.appendChild(tr);
+  });
 }
 drawChart(sorted);
 }
 
 function drawChart(notes) {
-const canvas = $(‘stats-chart’);
-const ctx    = canvas.getContext(‘2d’);
+const canvas = $('stats-chart');
+const ctx    = canvas.getContext('2d');
 const dpr    = window.devicePixelRatio || 1;
 
 const pn = notes.filter(n => stats[n.name]?.bestCents != null);
 
-// Height: enough rows for each note, min 120px
 const parent = canvas.parentElement;
 const W = parent.getBoundingClientRect().width ||
-parent.offsetWidth ||
-window.innerWidth || 300;
+  parent.offsetWidth ||
+  window.innerWidth || 300;
 const rowH = 22;
 const pad  = { l: 44, r: 36, t: 10, b: 20 };
 const H    = Math.max(120, pad.t + pn.length * rowH + pad.b);
 
 canvas.width  = W * dpr;
 canvas.height = H * dpr;
-canvas.style.width  = W + ‘px’;
-canvas.style.height = H + ‘px’;
+canvas.style.width  = W + 'px';
+canvas.style.height = H + 'px';
 ctx.scale(dpr, dpr);
 ctx.clearRect(0, 0, W, H);
 
 if (!pn.length) {
-ctx.fillStyle = ‘rgba(0,0,0,0.28)’;
-ctx.font = ‘13px Inconsolata,monospace’;
-ctx.textAlign = ‘center’;
-ctx.fillText(‘Play some rounds to see progress’, W / 2, H / 2);
-return;
+  ctx.fillStyle = 'rgba(0,0,0,0.28)';
+  ctx.font = '13px Inconsolata,monospace';
+  ctx.textAlign = 'center';
+  ctx.fillText('Play some rounds to see progress', W / 2, H / 2);
+  return;
 }
 
 const cW   = W - pad.l - pad.r;
-// X axis: dynamic — right edge is the worst (highest) bestCents score, rounded up to a nice value
-const worstScore = Math.max(…pn.map(n => stats[n.name].bestCents));
-// Round up to nearest value in CENTS_SEQ for a clean right edge
+const worstScore = Math.max(...pn.map(n => stats[n.name].bestCents));
 const xMax = CENTS_SEQ.slice().reverse().find(c => c >= worstScore) || worstScore;
 const xFor = c => pad.l + (c / xMax) * cW;
 
-// Grid lines: pick sensible divisions up to xMax
 const allGridCandidates = [1, 2, 3, 5, 7, 10, 15, 20, 25, 50, 75, 100];
 const gridLines = allGridCandidates.filter(c => c <= xMax);
-// Keep at most ~5 grid lines
 const step = Math.ceil(gridLines.length / 5);
 const filteredGrid = gridLines.filter((_, i) => i % step === 0 || gridLines[i] === xMax);
-ctx.strokeStyle = ‘rgba(0,0,0,0.10)’;
+ctx.strokeStyle = 'rgba(0,0,0,0.10)';
 ctx.lineWidth   = 1;
 filteredGrid.forEach(c => {
-const x = xFor(c);
-ctx.beginPath(); ctx.moveTo(x, pad.t); ctx.lineTo(x, H - pad.b); ctx.stroke();
-// Label at bottom
-ctx.fillStyle  = ‘rgba(0,0,0,0.38)’;
-ctx.font       = ‘9px Inconsolata,monospace’;
-ctx.textAlign  = ‘center’;
-ctx.fillText(fmtC(c), x, H - pad.b + 12);
+  const x = xFor(c);
+  ctx.beginPath(); ctx.moveTo(x, pad.t); ctx.lineTo(x, H - pad.b); ctx.stroke();
+  ctx.fillStyle  = 'rgba(0,0,0,0.38)';
+  ctx.font       = '9px Inconsolata,monospace';
+  ctx.textAlign  = 'center';
+  ctx.fillText(fmtC(c), x, H - pad.b + 12);
 });
 
-// Baseline at x=0
-ctx.strokeStyle = ‘rgba(0,0,0,0.15)’;
+ctx.strokeStyle = 'rgba(0,0,0,0.15)';
 ctx.lineWidth = 1;
 ctx.beginPath(); ctx.moveTo(pad.l, pad.t); ctx.lineTo(pad.l, H - pad.b); ctx.stroke();
 
-// Horizontal bars
 const bh = Math.min(14, rowH - 6);
 
 pn.forEach((note, i) => {
-const y  = pad.t + i * rowH + rowH / 2;
-const c  = stats[note.name].bestCents;
-const bw = xFor(c) - pad.l;
-const regressed = isRegressed(note.name);
+  const y  = pad.t + i * rowH + rowH / 2;
+  const c  = stats[note.name].bestCents;
+  const bw = xFor(c) - pad.l;
+  const regressed = isRegressed(note.name);
 
-```
-// Bar
-ctx.fillStyle = regressed ? '#b87c00' : '#c94a0a';
-ctx.beginPath();
-if (ctx.roundRect) ctx.roundRect(pad.l, y - bh/2, bw, bh, 3);
-else ctx.rect(pad.l, y - bh/2, bw, bh);
-ctx.fill();
+  ctx.fillStyle = regressed ? '#b87c00' : '#c94a0a';
+  ctx.beginPath();
+  if (ctx.roundRect) ctx.roundRect(pad.l, y - bh/2, bw, bh, 3);
+  else ctx.rect(pad.l, y - bh/2, bw, bh);
+  ctx.fill();
 
-// Note label on left
-ctx.fillStyle  = 'rgba(0,0,0,0.65)';
-ctx.font       = '10px Inconsolata,monospace';
-ctx.textAlign  = 'right';
-ctx.fillText(dn(note.name), pad.l - 5, y + 4);
+  ctx.fillStyle  = 'rgba(0,0,0,0.65)';
+  ctx.font       = '10px Inconsolata,monospace';
+  ctx.textAlign  = 'right';
+  ctx.fillText(dn(note.name), pad.l - 5, y + 4);
 
-// Value label at end of bar
-ctx.fillStyle  = 'rgba(0,0,0,0.50)';
-ctx.textAlign  = 'left';
-ctx.fillText(fmtC(c), pad.l + bw + 4, y + 4);
-```
-
+  ctx.fillStyle  = 'rgba(0,0,0,0.50)';
+  ctx.textAlign  = 'left';
+  ctx.fillText(fmtC(c), pad.l + bw + 4, y + 4);
 });
 }
 
 function startRetest(n) {
-// If still on start screen, transition to listening mode first
-if ($(‘start-btn’).style.display === ‘block’) {
-ensureAudio();
-hideStartScreen();
-const s = SOUNDS[settings.soundIdx];
-if (s.type === ‘sf’) {
-$(‘status-msg’).textContent = ‘Loading…’;
-$(‘status-msg’).style.color = ‘rgba(255,255,255,0.45)’;
-loadSfInstrument(s.sfName)
-.then(() => { renderSoundGrid(); $(‘status-msg’).textContent = ‘’; _startRetestInner(n); })
-.catch(() => { $(‘status-msg’).textContent = ‘’; _startRetestInner(n); });
-return;
-}
+if ($('start-btn').style.display === 'block') {
+  ensureAudio();
+  hideStartScreen();
+  const s = SOUNDS[settings.soundIdx];
+  if (s.type === 'sf') {
+    $('status-msg').textContent = 'Loading…';
+    $('status-msg').style.color = 'rgba(255,255,255,0.45)';
+    loadSfInstrument(s.sfName)
+      .then(() => { renderSoundGrid(); $('status-msg').textContent = ''; _startRetestInner(n); })
+      .catch(() => { $('status-msg').textContent = ''; _startRetestInner(n); });
+    return;
+  }
 }
 _startRetestInner(n);
 }
@@ -1990,14 +1920,13 @@ atLeastOneSuccessfulRetest = false;
 roundAttempts = 0; roundResults = [];
 closeInfo();
 updateRetestUI();
-// Set centsIdx from note’s bestCents
 const bestCents = stats[n]?.bestCents;
 if (bestCents != null) {
-let idx = CENTS_SEQ.findIndex(c => c <= bestCents);
-if (idx < 0) idx = CENTS_SEQ.length - 1;
-centsIdx = idx;
+  let idx = CENTS_SEQ.findIndex(c => c <= bestCents);
+  if (idx < 0) idx = CENTS_SEQ.length - 1;
+  centsIdx = idx;
 } else {
-centsIdx = settings.startCentsIdx;
+  centsIdx = settings.startCentsIdx;
 }
 currentNote = ALL_NOTES.find(note => note.name === n);
 startRound();
@@ -2010,29 +1939,28 @@ firstRoundOfRetest       = false;
 atLeastOneSuccessfulRetest = false;
 retestEnding             = false;
 roundAttempts = 0; roundResults = [];
-$(‘round-actions’).style.display = ‘none’; hideRetestEndActions();
-$(‘status-msg’).textContent = ‘’;
+$('round-actions').style.display = 'none'; hideRetestEndActions();
+$('status-msg').textContent = '';
 updateRetestUI();
 if (!silent) startRound();
 }
 
-// Also used as the startNoteTest alias for the stats table onclick
 function startNoteTest(n) { startRetest(n); }
 function endNoteTest()    { exitRetest(); }
 
 function updateRetestUI() {
 if (retestNote) {
-$(‘phase-label’).textContent = ‘Re-testing ’ + dn(retestNote);
-$(‘app’).classList.add(‘retest-mode’);
-setBg(’#0d2a1a’);
-$(‘exit-retest-btn’).style.display = ‘’;
-$(‘retest-close-btn’).style.display = ‘’;
+  $('phase-label').textContent = 'Re-testing ' + dn(retestNote);
+  $('app').classList.add('retest-mode');
+  setBg('#0d2a1a');
+  $('exit-retest-btn').style.display = '';
+  $('retest-close-btn').style.display = '';
 } else {
-$(‘phase-label’).textContent = ‘Listen’;
-$(‘app’).classList.remove(‘retest-mode’);
-setBg(’#4d1903’);
-$(‘exit-retest-btn’).style.display = ‘none’;
-$(‘retest-close-btn’).style.display = ‘none’;
+  $('phase-label').textContent = 'Listen';
+  $('app').classList.remove('retest-mode');
+  setBg('#4d1903');
+  $('exit-retest-btn').style.display = 'none';
+  $('retest-close-btn').style.display = 'none';
 }
 }
 
@@ -2040,41 +1968,37 @@ $(‘retest-close-btn’).style.display = ‘none’;
 // CONFIRM
 // ══════════════════════════════════════════════════════
 let confirmCb=null;
-function showConfirm(t,m,cb){ $(‘confirm-title’).textContent=t; $(‘confirm-msg’).textContent=m; confirmCb=cb; $(‘confirm-overlay’).classList.add(‘open’); }
-function closeConfirm(){ $(‘confirm-overlay’).classList.remove(‘open’); confirmCb=null; }
-$(‘confirm-yes’).addEventListener(‘click’,()=>{ const cb=confirmCb; closeConfirm(); if(cb) cb(); });
-$(‘confirm-no’).addEventListener(‘click’,closeConfirm);
-function confirmResetNote(n){ showConfirm(’Reset ’+dn(n),‘Erase scores for ‘+dn(n)+’?’,()=>{ delete stats[n]; saveStats(); renderStats(); }); }
-function confirmResetAll(){   showConfirm(‘Reset All’,‘Erase scores for every note?’,()=>{ stats={}; try{localStorage.removeItem(‘vio4-stats’);}catch(e){} renderStats(); }); }
+function showConfirm(t,m,cb){ $('confirm-title').textContent=t; $('confirm-msg').textContent=m; confirmCb=cb; $('confirm-overlay').classList.add('open'); }
+function closeConfirm(){ $('confirm-overlay').classList.remove('open'); confirmCb=null; }
+$('confirm-yes').addEventListener('click',()=>{ const cb=confirmCb; closeConfirm(); if(cb) cb(); });
+$('confirm-no').addEventListener('click',closeConfirm);
+function confirmResetNote(n){ showConfirm('Reset '+dn(n),'Erase scores for '+dn(n)+'?',()=>{ delete stats[n]; saveStats(); renderStats(); }); }
+function confirmResetAll(){   showConfirm('Reset All','Erase scores for every note?',()=>{ stats={}; try{localStorage.removeItem('vio4-stats');}catch(e){} renderStats(); }); }
 
 function fakeHistory() {
-// Valid differences in 5–50¢ range (subset of CENTS_SEQ)
 const validCents = CENTS_SEQ.filter(c => c >= 5 && c <= MAX_CENTS);
 const rand = arr => arr[Math.floor(Math.random() * arr.length)];
 ALL_NOTES.forEach(note => {
-if (!stats[note.name]) stats[note.name] = {};
-stats[note.name].attempts = Math.floor(Math.random() * 20) + 3;
-const best = rand(validCents);
-stats[note.name].bestCents = best;
-// ~40% chance of a regression: lastFailure is lower (harder) than best
-if (Math.random() < 0.40) {
-const harderOptions = validCents.filter(c => c < best);
-stats[note.name].lastFailureCents = harderOptions.length > 0 ? rand(harderOptions) : best;
-} else {
-// Failure at same or easier level
-const easierOrSame = validCents.filter(c => c >= best);
-stats[note.name].lastFailureCents = rand(easierOrSame);
-}
+  if (!stats[note.name]) stats[note.name] = {};
+  stats[note.name].attempts = Math.floor(Math.random() * 20) + 3;
+  const best = rand(validCents);
+  stats[note.name].bestCents = best;
+  if (Math.random() < 0.40) {
+    const harderOptions = validCents.filter(c => c < best);
+    stats[note.name].lastFailureCents = harderOptions.length > 0 ? rand(harderOptions) : best;
+  } else {
+    const easierOrSame = validCents.filter(c => c >= best);
+    stats[note.name].lastFailureCents = rand(easierOrSame);
+  }
 });
 saveStats();
 renderStats();
 }
 
-// Construct feedback email link at runtime to prevent Cloudflare obfuscation
 (function() {
-const u = ‘eartunerapp’, d = ‘gmail.com’;
-const el = document.getElementById(‘feedback-email’);
-if (el) { el.href = ‘mailto:’ + u + ‘@’ + d; el.textContent = u + ‘@’ + d; }
+const u = 'eartunerapp', d = 'gmail.com';
+const el = document.getElementById('feedback-email');
+if (el) { el.href = 'mailto:' + u + '@' + d; el.textContent = u + '@' + d; }
 })();
 
 function $(id){ return document.getElementById(id); }
@@ -2082,28 +2006,13 @@ function $(id){ return document.getElementById(id); }
 // ══════════════════════════════════════════════════════
 // KEYBOARD SUPPORT
 // ══════════════════════════════════════════════════════
-document.addEventListener(‘keydown’, e => {
-if (e.key !== ’ ’ && e.key !== ‘Enter’) return;
+document.addEventListener('keydown', e => {
+if (e.key !== ' ' && e.key !== 'Enter') return;
 e.preventDefault();
-
-// Settings overlay open → close
-if ($(‘settings-overlay’).classList.contains(‘open’)) {
-closeSettings(); return;
-}
-// Info overlay open → close
-if ($(‘info-overlay’).classList.contains(‘open’)) {
-closeInfo(); return;
-}
-// Start screen
-if ($(‘start-btn’).style.display !== ‘none’ && $(‘start-btn’).style.display !== ‘’) {
-handleStart(); return;
-}
-// Normal / review mode
-if (e.key === ’ ’) {
-handleTap(‘left’);
-} else {
-handleTap(‘right’);
-}
+if ($('settings-overlay').classList.contains('open')) { closeSettings(); return; }
+if ($('info-overlay').classList.contains('open')) { closeInfo(); return; }
+if ($('start-btn').style.display !== 'none' && $('start-btn').style.display !== '') { handleStart(); return; }
+if (e.key === ' ') { handleTap('left'); } else { handleTap('right'); }
 });
 
 // ══════════════════════════════════════════════════════
@@ -2114,21 +2023,17 @@ loadLoggingState();
 centsIdx=settings.startCentsIdx;
 renderSettings();
 updateRetestUI();
-$(‘status-msg’).textContent = ‘’;
-setBg(’#4d1903’); // sync Safari bottom bar on initial load
+$('status-msg').textContent = '';
+setBg('#4d1903');
 
-// Show start screen after DOM is fully ready
-document.addEventListener(‘DOMContentLoaded’, showStartScreen);
-// Also call immediately in case DOMContentLoaded already fired
-if (document.readyState !== ‘loading’) showStartScreen();
+document.addEventListener('DOMContentLoaded', showStartScreen);
+if (document.readyState !== 'loading') showStartScreen();
 
 function showStartScreen() {
-// Ensure app is visible and info/settings are closed
-$(‘app’).style.visibility  = ‘’;
-$(‘swipe-hint’).style.visibility = ‘’;
-$(‘info-overlay’).classList.remove(‘open’);
-$(‘settings-overlay’).classList.remove(‘open’);
-// Reset all in-flight game state
+$('app').style.visibility  = '';
+$('swipe-hint').style.visibility = '';
+$('info-overlay').classList.remove('open');
+$('settings-overlay').classList.remove('open');
 retestNote = null;
 retestEnding = false;
 firstRoundOfRetest = false;
@@ -2137,45 +2042,45 @@ roundFailed = false;
 roundResults = []; roundAttempts = 0;
 pendingCentsStep = 0;
 updateRetestUI();
-$(‘round-actions’).style.display = ‘none’; hideRetestEndActions();
-$(‘status-msg’).textContent = ‘’;
-$(‘note-row’).style.display        = ‘none’;
-$(‘replay-btn’).style.display      = ‘none’;
-$(‘swipe-hint’).style.display      = ‘none’;
-$(‘start-btn’).style.display       = ‘block’;
-$(‘upper-half’).style.visibility   = ‘hidden’;
-$(‘lower-half’).style.visibility   = ‘hidden’;
+$('round-actions').style.display = 'none'; hideRetestEndActions();
+$('status-msg').textContent = '';
+$('note-row').style.display        = 'none';
+$('replay-btn').style.display      = 'none';
+$('swipe-hint').style.display      = 'none';
+$('start-btn').style.display       = 'block';
+$('upper-half').style.visibility   = 'hidden';
+$('lower-half').style.visibility   = 'hidden';
 }
 
 function hideStartScreen() {
-$(‘note-row’).style.display        = ‘’;
-$(‘replay-btn’).style.display      = ‘’;
-$(‘swipe-hint’).style.display      = ‘’;
-$(‘start-btn’).style.display       = ‘none’;
-$(‘upper-half’).style.visibility   = ‘visible’;
-$(‘lower-half’).style.visibility   = ‘visible’;
-$(‘diff-value’).textContent = fmtC(CENTS_SEQ[centsIdx]);
+$('note-row').style.display        = '';
+$('replay-btn').style.display      = '';
+$('swipe-hint').style.display      = '';
+$('start-btn').style.display       = 'none';
+$('upper-half').style.visibility   = 'visible';
+$('lower-half').style.visibility   = 'visible';
+$('diff-value').textContent = fmtC(CENTS_SEQ[centsIdx]);
 }
 
 function handleStart() {
 ensureAudio();
 hideStartScreen();
 const s = SOUNDS[settings.soundIdx];
-if (s.type === ‘sf’) {
-$(‘status-msg’).textContent = ‘Loading…’;
-$(‘status-msg’).style.color = ‘rgba(255,255,255,0.45)’;
-loadSfInstrument(s.sfName)
-.then(() => {
-renderSoundGrid();
-$(‘status-msg’).textContent = ‘’;
-startRound();
-})
-.catch(() => {
-$(‘status-msg’).textContent = ‘’;
-startRound();
-});
+if (s.type === 'sf') {
+  $('status-msg').textContent = 'Loading…';
+  $('status-msg').style.color = 'rgba(255,255,255,0.45)';
+  loadSfInstrument(s.sfName)
+    .then(() => {
+      renderSoundGrid();
+      $('status-msg').textContent = '';
+      startRound();
+    })
+    .catch(() => {
+      $('status-msg').textContent = '';
+      startRound();
+    });
 } else {
-startRound();
+  startRound();
 }
 }
 </script>
@@ -2187,7 +2092,6 @@ startRound();
   c.width  = c.height = sz;
   const ctx = c.getContext('2d');
 
-  // Orange background with rounded corners
   const r = 36;
   ctx.fillStyle = '#b83c08';
   ctx.beginPath();
@@ -2201,17 +2105,14 @@ startRound();
   ctx.quadraticCurveTo(0, 0, r, 0);
   ctx.closePath(); ctx.fill();
 
-  // Vignette
   const vg = ctx.createRadialGradient(sz/2, sz/2, sz*0.2, sz/2, sz/2, sz*0.72);
   vg.addColorStop(0, 'rgba(0,0,0,0)');
   vg.addColorStop(1, 'rgba(0,0,0,0.35)');
   ctx.fillStyle = vg; ctx.fillRect(0, 0, sz, sz);
 
-  // ── Ear (from uploaded SVG, viewBox 0 0 15 15) ──
-  // Scale to ~110px tall, centered left-ish (ear occupies left 2/3 of icon)
   const earScale = 110 / 15;
-  const earOffX  = 10;  // restored to give ear breathing room from left edge
-  const earOffY  = 35;  // top offset
+  const earOffX  = 10;
+  const earOffY  = 35;
   ctx.save();
   ctx.translate(earOffX, earOffY);
   ctx.scale(earScale, earScale);
@@ -2222,19 +2123,16 @@ startRound();
   ctx.fill(earPath);
   ctx.restore();
 
-  // ── Tuning fork (uploaded SVG, viewBox 4.556 0 90.889 100) ──
-  // Straight segments run at 48.58° from horizontal → rotate -41.42° CCW to make them vertical.
-  // Path center in SVG coords ≈ (50, 50).
   const forkAngle  = -41.42 * Math.PI / 180;
   const forkScale2 = 1.05;
-  const forkCanvasX = 135; // shifted right to match ear repositioning
+  const forkCanvasX = 135;
   const forkCanvasY = sz / 2;
 
   ctx.save();
   ctx.translate(forkCanvasX, forkCanvasY);
   ctx.rotate(forkAngle);
   ctx.scale(forkScale2, forkScale2);
-  ctx.translate(-50, -50); // center the SVG path
+  ctx.translate(-50, -50);
 
   const forkPath2 = new Path2D(
     'M44.166,64.814c-2.928,3.32-6.117,2.474-8.33,0.521c-2.213-1.952-3.449-5.011-0.521-8.33L82.169,3.905L77.744,0L30.891,53.102c-4.33,4.907-3.796,10.473-0.949,14.454L11.626,88.314c-1.999-0.401-4.149,0.243-5.595,1.881c-2.156,2.442-1.923,6.174,0.521,8.329c2.444,2.156,6.174,1.922,8.33-0.521c1.445-1.638,1.816-3.853,1.169-5.786L34.368,71.46c4.303,2.329,9.893,2.166,14.223-2.739l46.854-53.103l-4.426-3.904L44.166,64.814L44.166,64.814z'
@@ -2243,4 +2141,12 @@ startRound();
   ctx.fill(forkPath2);
   ctx.restore();
 
-  const da
+  const dataUrl = c.toDataURL('image/png');
+  const icon = document.getElementById('apple-touch-icon');
+  if (icon) icon.href = dataUrl;
+  const infoIcon = document.getElementById('info-app-icon');
+  if (infoIcon) infoIcon.src = dataUrl;
+})();
+</script>
+</body>
+</html>
