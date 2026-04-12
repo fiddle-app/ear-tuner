@@ -8,8 +8,10 @@ Test and document the users, oral acuity (or at least their ability to distingui
 
 ## Status
 
-Version 1 complete, but developed outside of the unified "Fiddle apps" context. Ready to be used for helping to develop the standard look and feel for the family of apps.
+Version 1 nearly complete, but developed outside of the unified "Fiddle apps" context. Ready to be used for helping to develop the standard look and feel for the family of apps.
 
 ## App-Specific Notes
 
-TODO: Add any context specific to this app — key files, gotchas, decisions made.
+The main file is index.html
+
+It is currently hosted on GitHub at https://fiddle-app.github.io/ear-tuner/
