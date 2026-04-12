@@ -8,7 +8,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Ear Tuner">
 <meta name="theme-color" id="meta-theme" content="#b83c08">
-<link rel="apple-touch-icon" id="apple-touch-icon" href="">
+<link rel="apple-touch-icon" sizes="180x180" id="apple-touch-icon">
 <title>Ear Tuner</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;500;600&family=Nunito:wght@700&display=swap" rel="stylesheet">
@@ -2086,6 +2086,11 @@ if (s.type === 'sf') {
 </script>
 
 <script>
+// ══════════════════════════════════════════════════════
+// APP ICON — draws the home screen icon onto a 180×180 canvas
+// and sets it as the apple-touch-icon (used when adding to home screen)
+// and the in-app info overlay icon (#info-app-icon).
+// ══════════════════════════════════════════════════════
 (function(){
   const sz = 180;
   const c  = document.createElement('canvas');
