@@ -10,11 +10,11 @@ players developing relative pitch.
 
 ## Status
 
-Built (WPA); design review pending.
+Built (PWA); design review pending.
 
 ## Target Platform
 
-WPA today, served via GitHub Pages (`fiddle-app.github.io/ear`).
+PWA today, served via GitHub Pages (`fiddle-app.github.io/ear`).
 Future: Capacitor iOS wrap for iPhone/iPad + App Store.
 
 ## Key Files
@@ -25,5 +25,4 @@ Future: Capacitor iOS wrap for iPhone/iPad + App Store.
 
 ## Known Issues
 
-- iOS silent switch mutes Web Audio API output (workaround in place since commit 9d4d770)
-- Bell volume reduced 17% to avoid startling users
+Known issues are tracked in [backlog.md](backlog.md)
