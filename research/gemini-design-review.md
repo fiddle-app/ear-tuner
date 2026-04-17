@@ -25,9 +25,9 @@ The app has a strong, distinctive "Workshop" personality. The use of **Burnt Ora
  - [s] The transition to Retest mode is good, but the =="flash" states for Correct/Wrong are a bit "thin."==
 
 **Recommendation:** 
- - [x] **Resonance:** When a note plays, add a subtle CSS "pulse" animation to the circle. It should feel like the note is "ringing" through the UI. ==YES==
- - [x] **Haptic-Style Visuals:** Use "spring" animations (transform: scale(1.05)) for success states.  ==YES==
- - [x] **Improved Vignette:** Keep the vignette (as per user preference), but perhaps make it dynamic—pulse it slightly when the audio starts to signal the "Listen" phase.
+ - [ ] **Resonance:** When a note plays, add a subtle CSS "pulse" animation to the circle. It should feel like the note is "ringing" through the UI. ==YES==
+ - [ ] **Haptic-Style Visuals:** Use "spring" animations (transform: scale(1.05)) for success states.  ==YES==
+ - [ ] **Improved Vignette:** Keep the vignette (as per user preference), but perhaps make it dynamic—pulse it slightly when the audio starts to signal the "Listen" phase.
 
 ## 4. Usability Fixes (Priority)
  - [ ] **Status Text Contrast:** As noted in the previous review, `#e8d5b0` on orange is low contrast. I recommend moving to a high-white (`rgba(255,255,255,0.95)`) for the base message and using distinct, glowing colors for Correct (Emerald) and Wrong (Soft Red/Coral).
@@ -39,3 +39,4 @@ I will create a mockup that combines the "Warmth" of the original with "Precisio
  - [ ] **Frosted Glass (Glassmorphism):** Use `backdrop-filter: blur` on circles to make them pop against the orange/green backgrounds.
  - [ ] **Instrument Display:** Give the "diff-value" area a subtle "LCD" or "LED" backlight feel.
  - [ ] **Tactile Feedback:** Buttons should have a more "pressed" state rather than just opacity changes.
+
